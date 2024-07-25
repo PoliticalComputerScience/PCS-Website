@@ -221,15 +221,37 @@ import ButtonComponentOne from "path/to/components/buttons";
 
 Nice! That looks much clearner. This should be the standards for all `component` imports and exports in the components folder.
 
-### TODO: Styling
+### Styling
+We use an auto-formatter to handle styling. So simply run `npm run format` within the repo before committing, and it will ensure the code is formatted according to our requirements.
 
 ## TODO: Testing
 
+## MUI Styling Guidelines
 
+- MUI uses the `sx` attribute of elements to apply custom styling, like so:
+```
+<Paper
+    sx={{
+      display: 'flex',
+      justifyContent: 'center',
+      flexWrap: 'wrap',
+      listStyle: 'none',
+      p: 0.5,
+      m: 0,
+    }}
+    component="ul"
+  >
+```
+- If an `sx` object is being re-used (for instance to achieve a certain margin/padding setup) across components, it should be factored out into either a) a constant within the file if the value is only used within one component or b) a constant in a separate `~/utils/constants/theme.ts` file, named descriptively and documented via a comment.
+- Explicitly applying styles should be a last resort - for most things, the MUI default settings are clean and sensible and aren't worth deviating from without a strong design reason.
+- Avoid using magic numbers in the styling. In particular, avoid setting values like widths or heights arbitrarily based on how they look on your screen, since that's a surefire way to make the layout break on other screen sizes. Again, factor those out into descriptively-named constants.
+- In general, you should never set colors manually in the styling. MUI lets us define a custom theme [as described here](https://mui.com/material-ui/customization/theming/#accessing-the-theme-in-a-component).
+- If you need to introduce a new color, add an entry `colorname: hexcode` to the `theme` object, and then access it like so:
+```
+import { useTheme } from '@mui/material/styles';
 
-
-
-
-
-
-
+function Component() {
+  const theme = useTheme();
+  return <span sx={{backgroundColor: theme.palette.colorname}}>Hello World</span>;
+}
+```
