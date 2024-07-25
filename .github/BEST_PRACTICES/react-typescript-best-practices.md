@@ -4,9 +4,9 @@ How to keep your code clean, readable, scalable, and maintable. This doc should 
 
 ## Table of Contents
 
+- [Project Structure](#project-structure)
 - [Writing Accurate Code](#writing-accurate-code)
     - [Modern Code](#modern-code)
-- [Project Structure](#project-structure)
 - [Docs, Commenting, and Component Structure](#docs-commenting-and-component-structure)
     - [Interfaces](#interfaces)
     - [Constants](#constants)
@@ -14,34 +14,6 @@ How to keep your code clean, readable, scalable, and maintable. This doc should 
     - [The `index.ts` File](#the-indexts-file)
     - [TODO: Styling](#todo-styling)
 - [TODO: Testing](#todo-testing)
-
-## Writing Accurate Code
-All code should be written using as much functionaly from the latest version of ECMAScript, which is ES14 (released in 2024) and should certainly not use functionality from before ES6. Here are some things to look out for in your code for keeping your code up to date and exercising best practices:
-
-- When defining types for variables, don't use the `any` keyword. The only use case for the `any` keyword is when a library does not have types defined for TypeScript, but if that's the case, you probably shouldn't be using that library at all.
-- Dependencies you add through `npm` should be used, well-known, and well maintained. If the last update was not recent, please don't use that dependency as it will contribute to an outdated package as certain aspects of our project evolve without that dependency. Relying on backwards compatibility is not a good idea.
-- Delete all unused imports. These slow down our code.
-- Please avoid importing everything from a file. Only import the variables and functions you need.
-- Please use `camelCase` and `PascalCase` everywhere. Interfaces and Objects should be named using `PascalCase`, and all variables should be named using `camelCase`. The only use case for dashed names like `react-typescript-best-practices.md` is in markdown file names. Additionally, React component file names should be capitalized and other file names should be lowercase (following `camelCase`). Never use `snake_case`.
-- All files should end with a new line.
-
-### Modern Code
-
-- Don't use commonJS. This essentially means to always use the `import` keyword rather than `require` and to use `export` and `export default` words instead of `module.exports`.
-- Never use the `var` variable declaration. Always use `const` and `let` appropriately. By default, you should set all variables to `const` unless they are not final. Variables which are set to `let` and are not reassigned should be grounds for rejecting a PR.
-- Don't use the `function` keyword unless absolutely necessary. There are seldom use cases for it, but always prefer the use of arrow functions. For example, instead of writing this first block, write the second block
-```
-... JSDoc comments
-function squareNumber(num: number): number {
-    return num * num;
-} ;
-```
-```
-... JSDoc comments
-const squareNumber = (num: number): number => {
-    return num * num;
-};
-```
 
 ## Project Structure
 - Always define shared **static** resources in the `public` folder. This includes images, `JSON`, and `csv`. You should never have a `.ts` or `.tsx` file in the `public` folder
@@ -74,12 +46,42 @@ app
 └── main.tsx <-- Entry point for the app
 ```
 
+## Writing Accurate Code
+All code should be written using as much functionaly from the latest version of ECMAScript, which is ES14 (released in 2024) and should certainly not use functionality from before ES6. Here are some things to look out for in your code for keeping your code up to date and exercising best practices:
+
+- When defining types for variables, don't use the `any` keyword. The only use case for the `any` keyword is when a library does not have types defined for TypeScript, but if that's the case, you probably shouldn't be using that library at all.
+- Dependencies you add through `npm` should be used, well-known, and well maintained. If the last update was not recent, please don't use that dependency as it will contribute to an outdated package as certain aspects of our project evolve without that dependency. Relying on backwards compatibility is not a good idea.
+- Delete all unused imports. These slow down our code.
+- Please avoid importing everything from a file. Only import the variables and functions you need.
+- Please use `camelCase` and `PascalCase` everywhere. Interfaces and Objects should be named using `PascalCase`, and all variables should be named using `camelCase`. The only use case for dashed names like `react-typescript-best-practices.md` is in markdown file names. Additionally, React component file names should be capitalized and other file names should be lowercase (following `camelCase`). Never use `snake_case`.
+- All files should end with a new line.
+
+### Modern Code
+
+- Don't use commonJS. This essentially means to always use the `import` keyword rather than `require` and to use `export` and `export default` words instead of `module.exports`.
+- Never use the `var` variable declaration. Always use `const` and `let` appropriately. By default, you should set all variables to `const` unless they are not final. Variables which are set to `let` and are not reassigned should be grounds for rejecting a PR.
+- Don't use the `function` keyword unless absolutely necessary. There are seldom use cases for it, but always prefer the use of arrow functions. For example, instead of writing this first block, write the second block
+```
+... JSDoc comments
+function squareNumber(num: number): number {
+    return num * num;
+} ;
+```
+```
+... JSDoc comments
+const squareNumber = (num: number): number => {
+    return num * num;
+};
+```
+
 ## Docs, Commenting, and Component Structure
 
 React components should be commented and documented well, and types should be clearly defined. Here are some guidelines.
 
 ### Interfaces
 Components with parameters should have types defined in an interface. That interface should NOT be defined at the top of the component file, but rather in the `/utils/interfaces/props.ts` file and exported. This makes it easier if multiple components need to use the same interface. 
+
+If you are unfamiliar with interfaces, please take a look at [this resource](https://dev.to/reyronald/typescript-types-or-interfaces-for-react-component-props-1408).
 
 When defining an interface for a React component, use the following structure:
 ```
@@ -221,15 +223,37 @@ import ButtonComponentOne from "path/to/components/buttons";
 
 Nice! That looks much clearner. This should be the standards for all `component` imports and exports in the components folder.
 
-### TODO: Styling
+### Styling
+We use an auto-formatter to handle styling. So simply run `npm run format` within the repo before committing, and it will ensure the code is formatted according to our requirements.
 
 ## TODO: Testing
 
+## MUI Styling Guidelines
 
+- MUI uses the `sx` attribute of elements to apply custom styling, like so:
+```
+<Paper
+    sx={{
+      display: 'flex',
+      justifyContent: 'center',
+      flexWrap: 'wrap',
+      listStyle: 'none',
+      p: 0.5,
+      m: 0,
+    }}
+    component="ul"
+  >
+```
+- If an `sx` object is being re-used (for instance to achieve a certain margin/padding setup) across components, it should be factored out into either a) a constant within the file if the value is only used within one component or b) a constant in a separate `~/utils/constants/theme.ts` file, named descriptively and documented via a comment.
+- Explicitly applying styles should be a last resort - for most things, the MUI default settings are clean and sensible and aren't worth deviating from without a strong design reason.
+- Avoid using magic numbers in the styling. In particular, avoid setting values like widths or heights arbitrarily based on how they look on your screen, since that's a surefire way to make the layout break on other screen sizes. Again, factor those out into descriptively-named constants.
+- In general, you should never set colors manually in the styling. MUI lets us define a custom theme [as described here](https://mui.com/material-ui/customization/theming/#accessing-the-theme-in-a-component).
+- If you need to introduce a new color, add an entry `colorname: hexcode` to the `theme` object, and then access it like so:
+```
+import { useTheme } from '@mui/material/styles';
 
-
-
-
-
-
-
+function Component() {
+  const theme = useTheme();
+  return <span sx={{backgroundColor: theme.palette.colorname}}>Hello World</span>;
+}
+```
