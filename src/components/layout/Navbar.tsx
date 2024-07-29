@@ -30,10 +30,18 @@ const Navbar = () => {
 
   const navbarContainerStyles: SxProps = {
     ...defaultFlexRowStyles,
+    flexDirection: {
+        md: 'row',
+        sx: 'column'
+    },
     px: 1.5,
-    py: 1,
+    py: 1.2,
     justifyContent: "space-between",
-    height: "4rem",
+    height: "4.5rem",
+    width: '100%',
+    position: 'fixed',
+    backgroundColor: 'rgba(256, 256, 256, 0.7)',
+    backdropFilter: 'blur(11px)'
   };
 
   const imageStyles: SxProps = {
@@ -50,17 +58,17 @@ const Navbar = () => {
     {
       name: "about",
       buttonVariant: "text",
-      link: "/",
+      link: "/about",
     },
     {
       name: "what we do",
       buttonVariant: "text",
-      link: "/",
+      link: "/what-we-do",
     },
     {
       name: "join us",
       buttonVariant: "contained",
-      link: "/",
+      link: "/join-us",
       color: "secondary",
     },
   ];
@@ -150,7 +158,7 @@ const Navbar = () => {
   const leftNavbar = (
     <Box sx={defaultFlexRowStyles}>
         <Box component="img" src={logo} sx={imageStyles} />
-        <Typography variant="h1" component="div">
+        <Typography variant="h2" component="div">
           <Box component="span" sx={defaultEmphasisTextStyles}>
             PCS{" "}
           </Box>
