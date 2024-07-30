@@ -3,7 +3,9 @@ import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
   palette: {
     primary: {
+      dark: `rgba(0, 0, 0, 0.5)`,
       main: "#000000",
+      light: "#FFFFFF",
     },
     secondary: {
       light: "#A381BD",
@@ -13,6 +15,17 @@ const theme = createTheme({
 });
 
 theme.typography.h1 = {
+    [theme.breakpoints.up("md")]: {
+      fontSize: "3.5rem",
+      fontWeight: "bold",
+    },
+    [theme.breakpoints.down("md")]: {
+      fontSize: "1.75rem",
+      fontWeight: "bold",
+    },
+  };
+
+theme.typography.h2 = {
   [theme.breakpoints.up("md")]: {
     fontSize: "2rem",
     fontWeight: "bold",
@@ -24,6 +37,5 @@ theme.typography.h1 = {
 };
 
 theme.typography.button.textTransform = "none";
-theme.typography.button.hover;
 
 export default theme;
