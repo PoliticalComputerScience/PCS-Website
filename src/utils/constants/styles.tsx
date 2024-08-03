@@ -81,7 +81,10 @@ const displayOnDesktopStyles: SxProps = {
   display: { md: "block", xs: "none" },
 };
 
-const purpleMeshStyles = `radial-gradient(at 92% 97%, hsla(266,93%,81%,1) 0px, transparent 50%), radial-gradient(at 92% 14%, hsla(266,37%,72%,1) 0px, transparent 50%), radial-gradient(at 2% 88%, hsla(266,47%,73%,1) 0px, transparent 50%);`;
+const purpleMeshStyles = `radial-gradient(at 82% 26%, hsla(281,100%,90%,1) 0px, transparent 50%), radial-gradient(at 16% 66%, hsla(263,83%,84%,1) 0px, transparent 50%), radial-gradient(at 80% 100%, hsla(266,100%,80%,1) 0px, transparent 50%), radial-gradient(at 0% 0%, hsla(256,100%,85%,1) 0px, transparent 50%);`;
+const purpleGradientStylesToBottomRight = `linear-gradient(135deg, rgba(245,234,255,1) 0%, rgba(199,131,255,1) 150%);`
+const defaultPaddingY = "6rem"
+const defaultBorderRadius = 5
 
 export {
   defaultFlexStyles,
@@ -92,4 +95,7 @@ export {
   displayOnDesktopStyles,
   getDefaultOverlayStyles,
   purpleMeshStyles,
+  purpleGradientStylesToBottomRight,
+  defaultPaddingY,
+  defaultBorderRadius
 };

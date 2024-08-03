@@ -36,6 +36,8 @@ theme.typography.h2 = {
   },
 };
 
+theme.typography.h6.fontWeight = "none"
+
 theme.typography.button.textTransform = "none";
 
 export default theme;
