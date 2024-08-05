@@ -6,6 +6,8 @@
 - Create a new branch with the name `<your-name>/<feature>` with `git checkout -b <your-name>/<feature>`
 - Style note: Branch names should be short. For instance something like `vivianwilde/contributing-guide` would be a good branch name
 - If there isn't an issue [here](https://github.com/PoliticalComputerScience/PCS-Website/issues?q=sort%3Aupdated-desc+is%3Aissue+is%3Aopen) corresponding to what you're working on, create one.
+- Please make sure to check that what you're working on is not already "In Progress" or "Code Review" which you can find [here](https://github.com/orgs/PoliticalComputerScience/projects/1/views/2). **Please add yourself as an assignee to the issue you are working on and move it to the "In Progress" phase to avoid conflicts.**
+- **Read our [coding best practices doc](https://github.com/PoliticalComputerScience/PCS-Website/blob/main/.github/BEST_PRACTICES/react-typescript-best-practices.md).** It will help a lot with figuring out the structure of our project and contributing expectations.
 
 ## Once Your Code is Ready
 - Test your code, both by inspecting the running site and with automated tests (TODO: Our testing framework and guidelines)
