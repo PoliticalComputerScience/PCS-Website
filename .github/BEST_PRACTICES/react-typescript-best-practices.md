@@ -12,7 +12,7 @@ How to keep your code clean, readable, scalable, and maintable. This doc should 
     - [Constants](#constants)
     - [JSDocs Comments](#jsdocs-comments)
     - [The `index.ts` File](#the-indexts-file)
-    - [TODO: Styling](#todo-styling)
+    - [Styling](#styling)
 - [TODO: Testing](#todo-testing)
 
 ## Project Structure
