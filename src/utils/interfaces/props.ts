@@ -2,7 +2,8 @@ import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
 
 /**
  * Props for the `Stat` component which renders a numeric stat about the club.
- * @param stat the main numerical stat as a string.
+ * @param stat the main numerical stat as a string. This should not error when parsed as an int up to the last character.
+ * I.e, "3619", "2", "34+", and "738a" are all valid. "2749 and more" is not.
  * @param statName what the stat describes.
  * @param subtitle a subtitle under statName.
  */
