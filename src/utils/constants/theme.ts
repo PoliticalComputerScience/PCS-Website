@@ -35,6 +35,16 @@ theme.typography.h2 = {
     fontWeight: "bold",
   },
 };
+theme.typography.h5 = {
+  [theme.breakpoints.up("md")]: {
+    fontSize: "1.2rem",
+    fontWeight: "normal"
+  },
+  [theme.breakpoints.down("md")]: {
+    fontSize: "1rem",
+    fontWeight: "normal"
+  }
+}
 
 theme.typography.h6.fontWeight = "none"
 

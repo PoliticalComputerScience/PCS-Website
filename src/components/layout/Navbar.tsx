@@ -40,6 +40,7 @@ const Navbar = () => {
     height: "4.5rem",
     width: "100%",
     position: "fixed",
+    zIndex: "100",
     backgroundColor: "rgba(256, 256, 256, 0.7)",
     backdropFilter: "blur(11px)",
   };
@@ -54,6 +55,8 @@ const Navbar = () => {
     width: "100%",
     height: "100%",
     padding: "0.5rem",
+    position: "relative",
+    zIndex: "200"
   };
 
   // Styles for the button itself
@@ -138,9 +141,9 @@ const Navbar = () => {
       <Box>
         <Button
           id="demo-positioned-button"
-          aria-controls={open ? "demo-positioned-menu" : undefined}
+          aria-controls={whatWeDoOpen ? "demo-positioned-menu" : undefined}
           aria-haspopup="true"
-          aria-expanded={open ? "true" : undefined}
+          aria-expanded={whatWeDoOpen ? "true" : undefined}
           onClick={handleClickWhatWeDo}
           sx={buttonStyles}
         >
