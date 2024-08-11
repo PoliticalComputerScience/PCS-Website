@@ -1,8 +1,9 @@
 import { Navbar } from "../components/layout";
-import { Box, Button, SxProps, Typography } from "@mui/material";
+import { Box, Button, SxProps, Typography, Card } from "@mui/material";
 import groupPhoto from "/images/group_photo.jpg";
 import dssCirclePhoto from "/images/dss_circle_photo.jpg";
 import { useTheme } from "@mui/material/styles";
+
 import {
   defaultFlexStyles,
   defaultFlexRowStyles,
@@ -12,6 +13,7 @@ import {
 } from "../utils/constants/styles";
 import { Stat } from "../components/miscellaneous";
 import { stats } from "../../public/data";
+import Footer from "../components/layout/Footer";
 
 const Home = () => {
   /**
@@ -26,6 +28,8 @@ const Home = () => {
   strong tech background and host several web development/data science project each semester, 
   but we also have room individuals who explore non-technical projects relating to tech policy, 
   and even code tools to help inform others about government.`;
+
+  const recruitmentTimelineTitle = "Recruitment Timeline:";
 
   /**
    * Styles
@@ -66,7 +70,22 @@ const Home = () => {
     justifyContent: "center",
     alignItems: "start",
     px: "3rem",
-    py: "5rem",
+    pt: "5rem",
+    gap: "2rem",
+  };
+
+  const recruitmentTimelineStyles: SxProps = {
+    ...defaultFlexStyles,
+    flexDirection: {
+      md: "column",
+      xs: "column",
+    },
+    // width: "100%",
+    // overflowX: "hidden",
+    // justifyContent: "center",
+    alignItems: "start",
+    px: "3rem",
+    // py: "5rem",
     gap: "2rem",
   };
 
@@ -91,6 +110,7 @@ const Home = () => {
   );
 
   const clubStats = (
+    // TODO replace with a grid with padding?
     <Box sx={statContainerStyles}>
       {stats.map((stat) => (
         <Stat {...stat} />
@@ -99,6 +119,7 @@ const Home = () => {
   );
 
   const whoWeAre = (
+    // TODO convert the flex fuckery to a grid layout?
     <Box sx={whoWeAreStyles}>
       <Box
         sx={{
@@ -118,7 +139,7 @@ const Home = () => {
         <Box
           component="img"
           src={dssCirclePhoto}
-          sx={{ maxWidth: "100%", borderRadius: 5 }}
+          sx={{ maxWidth: "80%", borderRadius: 5 }}
         />
       </Box>
     </Box>
@@ -130,6 +151,7 @@ const Home = () => {
       {heroImage}
       {clubStats}
       {whoWeAre}
+      <Footer />
     </div>
   );
 };

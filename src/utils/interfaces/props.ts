@@ -37,3 +37,17 @@ export interface InfoSectionProps {
     img: string,
     additionalInfo?: string
 }
+}
+
+/**
+ * Props for a 'Step', i.e one element of the recruitment timeline.
+ * // TODO doc
+ * */
+export interface RecruitmentStepProps {
+    name: string
+    start: Date
+    end: Date
+    description: string
+
+}
+>>>>>>> Stashed changes

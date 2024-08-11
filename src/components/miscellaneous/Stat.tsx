@@ -1,5 +1,5 @@
 import { StatProps } from "../../utils/interfaces/props";
-import { Box, SxProps, Typography } from "@mui/material";
+import {Card, SxProps, Typography } from "@mui/material";
 import { useTheme } from "@mui/material";
 
 const Stat = ({ stat, statName, subtitle }: StatProps) => {
@@ -17,11 +17,11 @@ const Stat = ({ stat, statName, subtitle }: StatProps) => {
     flex: 1
   };
   return (
-    <Box sx={statContainerStyles}>
+    <Card sx={statContainerStyles}>
       <Typography variant="h2">{stat}</Typography>
       <Typography variant="body1">{statName}</Typography>
       {subtitle ? <Typography variant="body2">{subtitle}</Typography> : null}
-    </Box>
+    </Card>
   );
 };
 
