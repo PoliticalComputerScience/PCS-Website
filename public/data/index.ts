@@ -1,10 +1,18 @@
-import { StatProps, IconCardProps, InfoSectionProps } from "../../src/utils/interfaces/props";
+import { StatProps, IconCardProps, InfoSectionProps, ProjectCardProps } from "../../src/utils/interfaces/props";
 import {
   faBoxesStacked,
   faChartSimple,
   faLandmark,
   faPeopleGroup,
 } from "@fortawesome/free-solid-svg-icons";
+import foodwatchLandscape from "../images/foodwatch-landscape.png";
+import foodwatchPortait from "../images/foodwatch-portait.png";
+import decalLandscape from "../images/decal-landscape.jpg";
+import linkHealthTargetingLandscape from "../images/link-health-targeting-landscape.png"
+import orderedLibertyLandscape from "../images/ordered-liberty-landscape.png"
+import dataScienceCircleLandscape from "../images/data-science-circle-landscape.png"
+import dataScienceCirclePortait from "../images/data-science-circle-portrait.svg"
+import linkHealthVendingMachineLandscape from "../images/link-health-vending-machine-landscape.png"
 
 export const stats: StatProps[] = [
   {
@@ -92,4 +100,64 @@ export const aboutPageInfoSection: InfoSectionProps[] = [
         img: "/images/workshop.jpg",
         additionalInfo: "One to two per month"
     }
+]
+
+export const projects: ProjectCardProps[] = [
+  {
+    projectName: "FoodWatch",
+    projectDescription: "Pinpointing areas of food scarcity with neural networks",
+    tags: [
+      "Web Dev",
+      "Machine Learning"
+    ],
+    landscapePhoto: foodwatchLandscape,
+    portraitPhoto: foodwatchPortait
+  },
+  {
+    projectName: "DeCal",
+    projectDescription: "PS 198: Exploring how digital innovation is rehsaping governance and society",
+    tags: [
+      "Policy Analysis",
+      "Education"
+    ],
+    landscapePhoto: decalLandscape
+  },
+  {
+    projectName: "Link Health Targeting",
+    projectDescription: "Using data driven solutions for targeted outreach",
+    tags: [
+      "Data Science",
+      "Research"
+    ],
+    landscapePhoto: linkHealthTargetingLandscape
+  },
+  {
+    projectName: "Ordered Liberty Lineage Analysis",
+    projectDescription: "Exploring the due process of interpretation",
+    tags: [
+      "Policy Analysis",
+      "Data Science",
+      "Research"
+    ],
+    landscapePhoto: orderedLibertyLandscape
+  },
+  {
+    projectName: "Data Science Circle",
+    projectDescription: "Empowering the next generation of data scientists",
+    tags: [
+      "Data Science",
+      "Machine Learning"
+    ],
+    landscapePhoto: dataScienceCircleLandscape,
+    portraitPhoto: dataScienceCirclePortait
+  },
+  {
+    projectName: "Link Health Vending Machine",
+    projectDescription: "Connecting under-served individuals to welfare programs",
+    tags: [
+      "Policy Analysis",
+      "Web Dev"
+    ],
+    landscapePhoto: linkHealthVendingMachineLandscape
+  }
 ]

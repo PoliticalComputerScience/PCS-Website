@@ -84,7 +84,12 @@ const displayOnDesktopStyles: SxProps = {
 const purpleMeshStyles = `radial-gradient(at 82% 26%, hsla(281,100%,90%,1) 0px, transparent 50%), radial-gradient(at 16% 66%, hsla(263,83%,84%,1) 0px, transparent 50%), radial-gradient(at 80% 100%, hsla(266,100%,80%,1) 0px, transparent 50%), radial-gradient(at 0% 0%, hsla(256,100%,85%,1) 0px, transparent 50%);`;
 const purpleGradientStylesToBottomRight = `linear-gradient(135deg, rgba(245,234,255,1) 0%, rgba(199,131,255,1) 150%);`
 const defaultPaddingY = "6rem"
-const defaultBorderRadius = 5
+const defaultBorderRadius = {
+  md: 5,
+  xs: 4
+}
+const defaultBoxShadow = "#E9E9E9 0px 0px 20px 10px";
+const biggerBoxShadow = "#C9C9C9 0px 0px 30px 15px";
 
 export {
   defaultFlexStyles,
@@ -97,5 +102,7 @@ export {
   purpleMeshStyles,
   purpleGradientStylesToBottomRight,
   defaultPaddingY,
-  defaultBorderRadius
+  defaultBorderRadius,
+  defaultBoxShadow,
+  biggerBoxShadow
 };

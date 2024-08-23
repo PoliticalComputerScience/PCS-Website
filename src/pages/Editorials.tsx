@@ -1,6 +1,6 @@
 import { Navbar } from "../components/layout"
 
-const WhatWeDo = () => {
+const Editorials = () => {
   return (
     <div>
         <Navbar />
@@ -8,4 +8,4 @@ const WhatWeDo = () => {
   )
 }
 
-export default WhatWeDo
+export default Editorials
