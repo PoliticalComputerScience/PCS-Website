@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   purpleGradientStylesToBottomRight,
   defaultBorderRadius,
+  defaultBoxShadow
 } from "../../utils/constants/styles";
 
 /**
@@ -21,7 +22,7 @@ const IconCard = ({ title, children, icon }: IconCardProps) => {
     backgroundImage: purpleGradientStylesToBottomRight,
     p: "1.5rem",
     borderRadius: defaultBorderRadius,
-    boxShadow: "#E9E9E9 0px 0px 20px 10px",
+    boxShadow: defaultBoxShadow,
   };
   const topContainerStyles: SxProps = {
     display: "flex",
