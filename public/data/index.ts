@@ -1,4 +1,10 @@
-import { StatProps, IconCardProps, InfoSectionProps, ProjectCardProps } from "../../src/utils/interfaces/props";
+import {
+  StatProps,
+  IconCardProps,
+  InfoSectionProps,
+  ProjectCardProps,
+  RecruitmentStepProps,
+} from "../../src/utils/interfaces/props";
 import {
   faBoxesStacked,
   faChartSimple,
@@ -8,11 +14,11 @@ import {
 import foodwatchLandscape from "../images/foodwatch-landscape.png";
 import foodwatchPortait from "../images/foodwatch-portait.png";
 import decalLandscape from "../images/decal-landscape.jpg";
-import linkHealthTargetingLandscape from "../images/link-health-targeting-landscape.png"
-import orderedLibertyLandscape from "../images/ordered-liberty-landscape.png"
-import dataScienceCircleLandscape from "../images/data-science-circle-landscape.png"
-import dataScienceCirclePortait from "../images/data-science-circle-portrait.svg"
-import linkHealthVendingMachineLandscape from "../images/link-health-vending-machine-landscape.png"
+import linkHealthTargetingLandscape from "../images/link-health-targeting-landscape.png";
+import orderedLibertyLandscape from "../images/ordered-liberty-landscape.png";
+import dataScienceCircleLandscape from "../images/data-science-circle-landscape.png";
+import dataScienceCirclePortait from "../images/data-science-circle-portrait.svg";
+import linkHealthVendingMachineLandscape from "../images/link-health-vending-machine-landscape.png";
 
 export const stats: StatProps[] = [
   {
@@ -68,96 +74,117 @@ export const aboutPageIconCards: IconCardProps[] = [
 ];
 
 export const aboutPageInfoSection: InfoSectionProps[] = [
-    {
-        title: "General Meetings",
-        children: `At GMs, we host discussions and debates about current events, often
+  {
+    title: "General Meetings",
+    children: `At GMs, we host discussions and debates about current events, often
         relating to AI and tech policy, have guest speaker presentations, and share
         project updates with the group.`,
-        img: "/images/meetings.png",
-        additionalInfo: "Thursdays, 8 - 9 PM"
-    },
-    {
-        title: "Socials",
-        children: `Socials can vary in type, like watching debates together, hiking, biking,
+    img: "/images/meetings.png",
+    additionalInfo: "Thursdays, 8 - 9 PM",
+  },
+  {
+    title: "Socials",
+    children: `Socials can vary in type, like watching debates together, hiking, biking,
         excursions, parties, and of course we have a retreat each semester. The
         best place to get to know your PCS pals!`,
-        img: "/images/retreat.jpeg",
-        additionalInfo: "Two to three per month"
-    },
-    {
-        title: "Projects",
-        children: `The time requirement, duration, locations, and agenda can vary from project
+    img: "/images/retreat.jpeg",
+    additionalInfo: "Two to three per month",
+  },
+  {
+    title: "Projects",
+    children: `The time requirement, duration, locations, and agenda can vary from project
         to project. They are a great way to gain experience in technical work,
         research, or policy analysis!`,
-        img: "/images/project.png",
-        additionalInfo: "One meeting per week (usually)"
-    },
-    {
-        title: "Workshops",
-        children: `We host a few workshops each month focusing on improving our members'
+    img: "/images/project.png",
+    additionalInfo: "One meeting per week (usually)",
+  },
+  {
+    title: "Workshops",
+    children: `We host a few workshops each month focusing on improving our members'
         skill sets, including resumé and career workshops, data science, web
         development, and much more!`,
-        img: "/images/workshop.jpg",
-        additionalInfo: "One to two per month"
-    }
-]
+    img: "/images/workshop.jpg",
+    additionalInfo: "One to two per month",
+  },
+];
 
 export const projects: ProjectCardProps[] = [
   {
     projectName: "FoodWatch",
-    projectDescription: "Pinpointing areas of food scarcity with neural networks",
-    tags: [
-      "Web Dev",
-      "Machine Learning"
-    ],
+    projectDescription:
+      "Pinpointing areas of food scarcity with neural networks",
+    tags: ["Web Dev", "Machine Learning"],
     landscapePhoto: foodwatchLandscape,
-    portraitPhoto: foodwatchPortait
+    portraitPhoto: foodwatchPortait,
   },
   {
     projectName: "DeCal",
-    projectDescription: "PS 198: Exploring how digital innovation is rehsaping governance and society",
-    tags: [
-      "Policy Analysis",
-      "Education"
-    ],
-    landscapePhoto: decalLandscape
+    projectDescription:
+      "PS 198: Exploring how digital innovation is rehsaping governance and society",
+    tags: ["Policy Analysis", "Education"],
+    landscapePhoto: decalLandscape,
   },
   {
     projectName: "Link Health Targeting",
     projectDescription: "Using data driven solutions for targeted outreach",
-    tags: [
-      "Data Science",
-      "Research"
-    ],
-    landscapePhoto: linkHealthTargetingLandscape
+    tags: ["Data Science", "Research"],
+    landscapePhoto: linkHealthTargetingLandscape,
   },
   {
     projectName: "Ordered Liberty Lineage Analysis",
     projectDescription: "Exploring the due process of interpretation",
-    tags: [
-      "Policy Analysis",
-      "Data Science",
-      "Research"
-    ],
-    landscapePhoto: orderedLibertyLandscape
+    tags: ["Policy Analysis", "Data Science", "Research"],
+    landscapePhoto: orderedLibertyLandscape,
   },
   {
     projectName: "Data Science Circle",
     projectDescription: "Empowering the next generation of data scientists",
-    tags: [
-      "Data Science",
-      "Machine Learning"
-    ],
+    tags: ["Data Science", "Machine Learning"],
     landscapePhoto: dataScienceCircleLandscape,
-    portraitPhoto: dataScienceCirclePortait
+    portraitPhoto: dataScienceCirclePortait,
   },
   {
     projectName: "Link Health Vending Machine",
-    projectDescription: "Connecting under-served individuals to welfare programs",
-    tags: [
-      "Policy Analysis",
-      "Web Dev"
-    ],
-    landscapePhoto: linkHealthVendingMachineLandscape
-  }
-]
+    projectDescription:
+      "Connecting under-served individuals to welfare programs",
+    tags: ["Policy Analysis", "Web Dev"],
+    landscapePhoto: linkHealthVendingMachineLandscape,
+  },
+];
+
+//TODO: timezone fuckery
+export const recruitmentSteps: RecruitmentStepProps[] = [
+
+  {
+    name: "Tabling",
+    start: new Date("2024-08-28"),
+    end: new Date("2024-09-11"),
+    description: "We'll be tabling on Sproul! Come say hi.",
+  },
+  {
+    name: "Coffee Chats",
+    start: new Date("2024-09-02"),
+    end: new Date("2024-09-10"),
+    description: "Chat with a board member and learn more about the club!",
+  },
+
+  {
+    name: "URM Infosession + Infosession 1",
+    start: new Date("2024-09-05"),
+    end: new Date("2024-09-05"),
+    description: "Ia Ia Cthulhu Ftaghn?",
+  },
+
+  {
+    name: "Infosession 2 (Virtual)",
+    start: new Date("2024-09-09"),
+    end: new Date("2024-09-09"),
+    description: "Ia Ia Cthulhu Ftaghn?",
+  },
+  {
+    name: "Applications Due",
+    start: new Date("2024-09-10"),
+    end: new Date("2024-09-10"),
+    description: "At the end of things, where the dry dust bleeds",
+  },
+];

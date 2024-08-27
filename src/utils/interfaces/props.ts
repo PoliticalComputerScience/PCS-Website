@@ -1,4 +1,4 @@
-import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
 /**
  * Props for the `Stat` component which renders a numeric stat about the club.
@@ -8,9 +8,9 @@ import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
  * @param subtitle a subtitle under statName.
  */
 export interface StatProps {
-    stat: string,
-    statName: string
-    subtitle?: string
+    stat: string;
+    statName: string;
+    subtitle?: string;
 }
 
 /**
@@ -20,9 +20,9 @@ export interface StatProps {
  * @param icon the icon to go in the top right corner of the card.
  */
 export interface IconCardProps {
-    title: string,
-    children: string,
-    icon: IconDefinition
+    title: string;
+    children: string;
+    icon: IconDefinition;
 }
 
 /**
@@ -33,10 +33,10 @@ export interface IconCardProps {
  * @param additionalInfo additional information (usually short) to add below the paragraph body.
  */
 export interface InfoSectionProps {
-    title: string,
-    children: string,
-    img: string,
-    additionalInfo?: string
+    title: string;
+    children: string;
+    img: string;
+    additionalInfo?: string;
 }
 
 /**
@@ -48,11 +48,11 @@ export interface InfoSectionProps {
  * @param portraitPhoto OPTIONAL a 2:1 dimension photo which will render paritally over the landscape photo if provided.
  */
 export interface ProjectCardProps {
-    projectName: string,
-    projectDescription: string,
-    tags: string[],
-    landscapePhoto: string,
-    portraitPhoto?: string
+    projectName: string;
+    projectDescription: string;
+    tags: string[];
+    landscapePhoto: string;
+    portraitPhoto?: string;
 }
 
 /**
@@ -63,8 +63,17 @@ export interface ProjectCardProps {
  * @param selectedItem the item which is currently selected by the `useState`.
  */
 export interface DropdownProps {
-    dropdownName: string,
-    dropdownItems: string[],
-    selectSetter: (item: string) => void,
-    selectedItem: string
+    dropdownName: string;
+    dropdownItems: string[];
+    selectSetter: (item: string) => void;
+    selectedItem: string;
+}
+
+/**
+ * Props for a recruitment 'step', a single element of the recruitment timeline widget */
+export interface RecruitmentStepProps {
+    name: string;
+    start: Date;
+    end: Date;
+    description?: string;
 }

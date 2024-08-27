@@ -7,6 +7,7 @@ import {
   defaultFlexColStyles,
   getDefaultOverlayStyles,
   purpleMeshStyles,
+  purpleInlineText
 } from "../utils/constants/styles";
 import { useTheme } from "@mui/material/styles";
 import generalMemberIcon from "/images/join_us_page/generalMember.png";
@@ -28,7 +29,6 @@ const JoinUs = () => {
   const PCS_INSTAGRAM = "https://www.instagram.com/pcs_berkeley/";
   const theme = useTheme();
 
-  const purpleText = { color: theme.palette.secondary.dark };
   const purpleCardStyle = {
     // bgcolor: theme.palette.secondary.light,
     backgroundImage: purpleMeshStyles,
@@ -36,13 +36,12 @@ const JoinUs = () => {
     px: 4,
   };
   const greyBox = { borderRadius: "6px", bgcolor: "#D9D9D9", width: "50%" };
-  const bold = { fontWeight: 600 };
+  const bold = { fontWeight: 'bold' };
 
   const inlineLink = {
     ...bold,
-    ...purpleText,
+    ...purpleInlineText(theme),
     textDecoration: "none",
-    display: "inline",
   };
   const leftIcon = (src) => (
     <Box
@@ -77,7 +76,7 @@ const JoinUs = () => {
             <Typography
               variant="h1"
               component="p"
-              sx={{ ...purpleText, display: "inline" }}
+              sx={{ ...purpleInlineText(theme)}}
             >
               {" "}
               Join Us{" "}
