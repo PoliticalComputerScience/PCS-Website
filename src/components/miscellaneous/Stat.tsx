@@ -43,7 +43,7 @@ const Stat = ({ stat, statName, subtitle }: StatProps) => {
   };
 
   return (
-    <Box sx={statContainerStyles}>
+    <Card sx={statContainerStyles}>
       {hasSuffix(stat) ? (
         <Typography variant="h2">
           {customCountup(parseInt(stat.slice(0, -1)))}

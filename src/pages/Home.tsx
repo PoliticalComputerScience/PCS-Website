@@ -1,15 +1,35 @@
 import { Navbar } from "../components/layout";
-import { Box, Button, SxProps, Typography, Card } from "@mui/material";
+import RecruitmentTimeline from "../components/RecruitmentTimeline";
+import {
+  Divider,
+  Stack,
+  Box,
+  Button,
+  SxProps,
+  Typography,
+  Card,
+  Paper,
+  CardMedia,
+} from "@mui/material";
 import groupPhoto from "/images/group_photo.jpg";
 import dssCirclePhoto from "/images/dss_circle_photo.jpg";
 import { useTheme } from "@mui/material/styles";
+import citrisPhoto from "/images/icons/citrisLab.jpg";
+import microsoftPhoto from "/images/icons/evil.png";
+import applePhoto from "/images/icons/billy.png";
+import googlePhoto from "/images/icons/google.png";
+import visaPhoto from "/images/icons/visa.png";
+import linkhealthPhoto from "/images/icons/linkhealthHome.png";
+import friendshipPhoto from "/images/friends.png"
 
+import useMediaQuery from "@mui/material/useMediaQuery";
 import {
   defaultFlexStyles,
   defaultFlexRowStyles,
   defaultFlexColStyles,
   getDefaultOverlayStyles,
   purpleMeshStyles,
+  purpleInlineText,
 } from "../utils/constants/styles";
 import { Stat } from "../components/miscellaneous";
 import { stats } from "../../public/data";
@@ -110,7 +130,6 @@ const Home = () => {
   );
 
   const clubStats = (
-    // TODO replace with a grid with padding?
     <Box sx={statContainerStyles}>
       {stats.map((stat) => (
         <Stat {...stat} />
@@ -119,7 +138,6 @@ const Home = () => {
   );
 
   const whoWeAre = (
-    // TODO convert the flex fuckery to a grid layout?
     <Box sx={whoWeAreStyles}>
       <Box
         sx={{
@@ -145,12 +163,101 @@ const Home = () => {
     </Box>
   );
 
+  const recruitmentTimeline = (
+    <Box sx={{ ...recruitmentTimelineStyles, p: 2 }}>
+      <Typography variant="h2">{recruitmentTimelineTitle}</Typography>
+      <RecruitmentTimeline />
+    </Box>
+  );
+
+  const ourCommunity = (
+    <Stack
+      component={Paper}
+    sx={{overflow:'auto', backgroundImage: purpleMeshStyles, my:2, p:2 }}
+      direction="row"
+      spacing={5}
+
+    >
+      <Card raised={true} sx={{ borderRadius: "10px", width: "13%", p:2 }}>
+      <Stack direction="column" spacing={2}>
+        <Typography variant="h2">
+          Our{" "}
+          {
+            <Typography variant="h2" sx={purpleInlineText}>
+              Community
+            </Typography>
+          }
+          :
+        </Typography>
+        <Typography>retreat, socials, speaker events and more!</Typography>
+    <CardMedia sx={{height: 160}} image={friendshipPhoto}></CardMedia>
+      </Stack>
+      </Card>
+    </Stack>
+  );
+
+  const clubImage = (src) => (
+    <Box component={"img"} sx={{ height: "7em" }} src={src} />
+  );
+
+  const bigscreen = useMediaQuery(theme.breakpoints.up("sm"));
+
+  const bragging = (
+    <Stack direction={bigscreen ? "row" : "column"} spacing={3}>
+      <Box sx={{ ...defaultFlexColStyles, width: "45%", pl: 10 }}>
+        <Typography variant={"h1"}>
+          {" "}
+          our past{" "}
+          {
+            <Typography
+              variant={"h1"}
+              sx={{ ...purpleInlineText(theme), display: "inline" }}
+            >
+              clients
+            </Typography>
+          }{" "}
+        </Typography>
+        <Stack direction="row" spacing={20}>
+          {clubImage(citrisPhoto)}
+          {clubImage(linkhealthPhoto)}
+        </Stack>
+        <Button
+          variant="contained"
+          sx={{ bgcolor: theme.palette.secondary.light, mt: 2, px: 2, py: 1 }}
+        >
+          {" "}
+          <Typography sx={{ fontSize: "2.2em" }}> More Projects </Typography>
+        </Button>
+      </Box>
+      <Divider
+        variant={"inset"}
+        orientation={bigscreen ? "vertical" : "horizontal"}
+        flexItem
+        sx={{ bgcolor: theme.palette.primary.main, borderRightWidth: 5 }}
+      />
+      <Box sx={{ ...defaultFlexColStyles, width: "45%" }}>
+        <Typography variant="h1">where do our members go? </Typography>
+        <Stack direction="row">
+          {clubImage(visaPhoto)}
+          {clubImage(applePhoto)}
+        </Stack>
+        <Stack direction="row">
+          {clubImage(googlePhoto)}
+          {clubImage(microsoftPhoto)}
+        </Stack>
+      </Box>
+    </Stack>
+  );
+
   return (
     <div>
       <Navbar />
       {heroImage}
       {clubStats}
       {whoWeAre}
+      {recruitmentTimeline}
+      {ourCommunity}
+      {bragging}
       <Footer />
     </div>
   );
