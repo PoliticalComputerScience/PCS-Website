@@ -84,30 +84,9 @@ const Navbar = () => {
       link: "/about",
     },
     {
-      name: "what we do",
+      name: "projects",
       buttonVariant: "text",
-      link: [
-        {
-          name: "projects",
-          buttonVariant: "text",
-          link: "/what-we-do/projects",
-        },
-        {
-          name: "editorials",
-          buttonVariant: "text",
-          link: "/what-we-do/editorials",
-        },
-        {
-          name: "research",
-          buttonVariant: "text",
-          link: "/what-we-do/research",
-        },
-        {
-          name: "external events",
-          buttonVariant: "text",
-          link: "/what-we-do/external-events",
-        },
-      ],
+      link: "/what-we-do/projects"
     },
     {
       name: "join us",

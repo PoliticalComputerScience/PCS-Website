@@ -1,5 +1,5 @@
 import { SxProps, Box, Typography } from "@mui/material";
-import { TextualHeroImage, Line, Navbar } from "../components/layout";
+import { TextualHeroImage, Line, Navbar, Footer } from "../components/layout";
 import { IconCard, InfoSection } from "../components/miscellaneous";
 import { aboutPageIconCards, aboutPageInfoSection } from "../../public/data";
 import {
@@ -62,6 +62,7 @@ const About = () => {
       />
       {aSpaceForStudentsTo}
       {infoSection}
+      <Footer />
     </>
   );
 };

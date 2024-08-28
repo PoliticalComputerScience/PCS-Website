@@ -1,26 +1,15 @@
-import * as React from "react";
-
 import { useTheme } from "@mui/material/styles";
-import HorizontalRuleIcon from "@mui/icons-material/HorizontalRule";
 import {
   Stepper,
   Step,
   StepLabel,
-  StepButton,
-  StepConnector,
   Box,
-  Button,
-  SxProps,
   Typography,
-  Card,
-  StepProps,
-  Popover,
 } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 import { recruitmentSteps } from "../../public/data";
 import { ArrowForward } from "@mui/icons-material";
-import { RecruitmentStepProps } from "../utils/interfaces/props";
 
 const PcsConnector = () => {
   const theme = useTheme();
@@ -53,10 +42,9 @@ const RecruitmentTimeline = () => {
     sx ={{p: 2}}
         connector={<PcsConnector />}
         nonLinear
-        activeStep={null}
         orientation={bigscreen ? "horizontal" : "vertical"}
       >
-        {recruitmentSteps.map(({ name, start, end, description }) => (
+        {recruitmentSteps.map(({ name, start, end }) => (
           <Step key={name} completed={false} sx={{ maxWidth: "20rem"}}>
             <StepLabel
               StepIconProps={{
