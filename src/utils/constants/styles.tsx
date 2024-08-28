@@ -93,7 +93,7 @@ const biggerBoxShadow = "#C9C9C9 0px 0px 30px 15px";
 
 
 /* For purple text displayed inline with other non-purple text */
-const purpleInlineText = (theme) => ({
+const purpleInlineText = (theme: Theme) => ({
   color: theme.palette.secondary.dark,
   display: "inline",
 });

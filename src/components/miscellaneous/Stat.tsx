@@ -18,6 +18,7 @@ const Stat = ({ stat, statName, subtitle }: StatProps) => {
     border: `0.5px solid ${theme.palette.secondary.light}`,
     backgroundColor: theme.palette.primary.light,
     flex: 1,
+    minWidth: "200px"
   };
 
   /**

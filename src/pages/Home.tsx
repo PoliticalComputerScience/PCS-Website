@@ -2,25 +2,20 @@ import { Navbar } from "../components/layout";
 import RecruitmentTimeline from "../components/RecruitmentTimeline";
 import {
   Divider,
-  Stack,
+  // Stack,
   Box,
   Button,
   SxProps,
   Typography,
-  Card,
-  Paper,
-  CardMedia,
+  // Card,
+  // Paper,
+  // CardMedia,
 } from "@mui/material";
 import groupPhoto from "/images/group_photo.jpg";
 import dssCirclePhoto from "/images/dss_circle_photo.jpg";
 import { useTheme } from "@mui/material/styles";
-import citrisPhoto from "/images/icons/citrisLab.jpg";
-import microsoftPhoto from "/images/icons/evil.png";
-import applePhoto from "/images/icons/billy.png";
-import googlePhoto from "/images/icons/google.png";
-import visaPhoto from "/images/icons/visa.png";
-import linkhealthPhoto from "/images/icons/linkhealthHome.png";
-import friendshipPhoto from "/images/friends.png"
+import pastClients from "/images/pastClients.png";
+import whereMembersGo from "/images/whereMembersGo.png";
 
 import useMediaQuery from "@mui/material/useMediaQuery";
 import {
@@ -170,41 +165,57 @@ const Home = () => {
     </Box>
   );
 
-  const ourCommunity = (
-    <Stack
-      component={Paper}
-    sx={{overflow:'auto', backgroundImage: purpleMeshStyles, my:2, p:2 }}
-      direction="row"
-      spacing={5}
+  // const ourCommunity = (
+  //   <Stack
+  //     component={Paper}
+  //     sx={{ overflow: "auto", backgroundImage: purpleMeshStyles, my: 2, p: 2 }}
+  //     direction="row"
+  //     spacing={5}
+  //   >
+  //     <Card raised={true} sx={{ borderRadius: "10px", width: "13%", p: 2 }}>
+  //       <Stack direction="column" spacing={2}>
+  //         <Typography variant="h2">
+  //           Our{" "}
+  //           {
+  //             <Typography variant="h2" sx={purpleInlineText}>
+  //               Community
+  //             </Typography>
+  //           }
+  //           :
+  //         </Typography>
+  //         <Typography>retreat, socials, speaker events and more!</Typography>
+  //         <CardMedia sx={{ height: 160 }} image={friendshipPhoto}></CardMedia>
+  //       </Stack>
+  //     </Card>
+  //   </Stack>
+  // );
 
-    >
-      <Card raised={true} sx={{ borderRadius: "10px", width: "13%", p:2 }}>
-      <Stack direction="column" spacing={2}>
-        <Typography variant="h2">
-          Our{" "}
-          {
-            <Typography variant="h2" sx={purpleInlineText}>
-              Community
-            </Typography>
-          }
-          :
-        </Typography>
-        <Typography>retreat, socials, speaker events and more!</Typography>
-    <CardMedia sx={{height: 160}} image={friendshipPhoto}></CardMedia>
-      </Stack>
-      </Card>
-    </Stack>
-  );
-
-  const clubImage = (src) => (
-    <Box component={"img"} sx={{ height: "7em" }} src={src} />
-  );
+  // const clubImage = (src: string) => (
+  //   <Box component={"img"} sx={{ height: "7em" }} src={src} />
+  // );
 
   const bigscreen = useMediaQuery(theme.breakpoints.up("sm"));
 
   const bragging = (
-    <Stack direction={bigscreen ? "row" : "column"} spacing={3}>
-      <Box sx={{ ...defaultFlexColStyles, width: "45%", pl: 10 }}>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: {
+          md: "row",
+          xs: "column",
+        },
+        width: "100%",
+        overflow: "hidden",
+        justifyContent: "center",
+        alignItems: {
+          md: "start",
+          xs: "center",
+        },
+        gap: "3rem",
+        p: "3rem",
+      }}
+    >
+      <Box sx={{ ...defaultFlexColStyles, flex: 1 }}>
         <Typography variant={"h1"}>
           {" "}
           our past{" "}
@@ -217,10 +228,7 @@ const Home = () => {
             </Typography>
           }{" "}
         </Typography>
-        <Stack direction="row" spacing={20}>
-          {clubImage(citrisPhoto)}
-          {clubImage(linkhealthPhoto)}
-        </Stack>
+        <Box component="img" src={pastClients} sx={{ width: "100%" }} />
         <Button
           variant="contained"
           sx={{ bgcolor: theme.palette.secondary.light, mt: 2, px: 2, py: 1 }}
@@ -235,31 +243,24 @@ const Home = () => {
         flexItem
         sx={{ bgcolor: theme.palette.primary.main, borderRightWidth: 5 }}
       />
-      <Box sx={{ ...defaultFlexColStyles, width: "45%" }}>
+      <Box sx={{ ...defaultFlexColStyles, flex: 1 }}>
         <Typography variant="h1">where do our members go? </Typography>
-        <Stack direction="row">
-          {clubImage(visaPhoto)}
-          {clubImage(applePhoto)}
-        </Stack>
-        <Stack direction="row">
-          {clubImage(googlePhoto)}
-          {clubImage(microsoftPhoto)}
-        </Stack>
+        <Box component="img" src={whereMembersGo} sx={{ width: "90%" }} />
       </Box>
-    </Stack>
+    </Box>
   );
 
   return (
-    <div>
+    <Box sx={{ overflow: "hidden", width: "100%" }}>
       <Navbar />
       {heroImage}
       {clubStats}
       {whoWeAre}
       {recruitmentTimeline}
-      {ourCommunity}
+      {/*ourCommunity*/}
       {bragging}
       <Footer />
-    </div>
+    </Box>
   );
 };
 
