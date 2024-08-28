@@ -95,18 +95,19 @@ const Navbar = () => {
         {
           name: "editorials",
           buttonVariant: "text",
-          link: "/what-we-do/editorials",
+          // link: "/what-we-do/editorials",
+          link: "https://medium.com/@pcsberkeley"
         },
-        {
-          name: "research",
-          buttonVariant: "text",
-          link: "/what-we-do/research",
-        },
-        {
-          name: "external events",
-          buttonVariant: "text",
-          link: "/what-we-do/external-events",
-        },
+        // {
+        //   name: "research",
+        //   buttonVariant: "text",
+        //   link: "/what-we-do/research",
+        // },
+        // {
+        //   name: "external events",
+        //   buttonVariant: "text",
+        //   link: "/what-we-do/external-events",
+        // },
       ],
     },
     {
