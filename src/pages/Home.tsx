@@ -20,7 +20,11 @@ import applePhoto from "/images/icons/billy.png";
 import googlePhoto from "/images/icons/google.png";
 import visaPhoto from "/images/icons/visa.png";
 import linkhealthPhoto from "/images/icons/linkhealthHome.png";
-import friendshipPhoto from "/images/friends.png"
+import friendshipPhoto from "/images/friends.png";
+import workshopPhoto from "/images/workshop.jpg";
+import hikePhoto from "/images/hike.png";
+import retreatPhoto from "/images/retreat.jpeg";
+import projectPhoto from "/images/project.png";
 
 import useMediaQuery from "@mui/material/useMediaQuery";
 import {
@@ -109,6 +113,9 @@ const Home = () => {
     gap: "2rem",
   };
 
+
+  const bigscreen = useMediaQuery(theme.breakpoints.up("sm"));
+
   const heroImage = (
     <Box sx={heroImageStyles}>
       <Box sx={{ ...defaultOverlayStyles, borderRadius: 5 }}>
@@ -173,26 +180,43 @@ const Home = () => {
   const ourCommunity = (
     <Stack
       component={Paper}
-    sx={{overflow:'auto', backgroundImage: purpleMeshStyles, my:2, p:2 }}
-      direction="row"
+      sx={{ overflow: "auto", backgroundImage: purpleMeshStyles, my: 2, p: 2 }}
+      direction={bigscreen ? "row": "column"}
       spacing={5}
-
     >
-      <Card raised={true} sx={{ borderRadius: "10px", width: "13%", p:2 }}>
-      <Stack direction="column" spacing={2}>
-        <Typography variant="h2">
-          Our{" "}
-          {
-            <Typography variant="h2" sx={purpleInlineText}>
-              Community
-            </Typography>
-          }
-          :
-        </Typography>
-        <Typography>retreat, socials, speaker events and more!</Typography>
-    <CardMedia sx={{height: 160}} image={friendshipPhoto}></CardMedia>
-      </Stack>
+      <Card raised={true} sx={{ borderRadius: "10px", minWidth: '15rem', p: 2 }}>
+        <Stack direction="column" spacing={2}>
+          <Typography variant="h2">
+            Our{" "}
+            {
+              <Typography variant="h2" sx={purpleInlineText}>
+                Community
+              </Typography>
+            }
+            :
+          </Typography>
+          <Typography>retreat, socials, speaker events and more!</Typography>
+          <CardMedia sx={{ height: 160 }} image={friendshipPhoto}></CardMedia>
+        </Stack>
       </Card>
+      <Box component={"img"} sx={{ height: "350px", pt: 1 }} src={hikePhoto} />
+      <Box
+        component={"img"}
+        sx={{ height: "350px", pt: 1 }}
+    src={projectPhoto}
+      />
+
+      <Box
+        component={"img"}
+        sx={{ height: "350px", pt: 1 }}
+        src={retreatPhoto}
+      />
+      <Box
+        component={"img"}
+        sx={{ height: "350px", pt: 1 }}
+    src={workshopPhoto}
+      />
+
     </Stack>
   );
 
@@ -200,7 +224,6 @@ const Home = () => {
     <Box component={"img"} sx={{ height: "7em" }} src={src} />
   );
 
-  const bigscreen = useMediaQuery(theme.breakpoints.up("sm"));
 
   const bragging = (
     <Stack direction={bigscreen ? "row" : "column"} spacing={3}>
