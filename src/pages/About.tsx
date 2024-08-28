@@ -1,11 +1,10 @@
 import { SxProps, Box, Typography } from "@mui/material";
-import { Line, Navbar } from "../components/layout";
+import { TextualHeroImage, Line, Navbar } from "../components/layout";
 import { IconCard, InfoSection } from "../components/miscellaneous";
 import { aboutPageIconCards, aboutPageInfoSection } from "../../public/data";
 import {
   defaultFlexColStyles,
   defaultPaddingY,
-  purpleMeshStyles,
 } from "../utils/constants/styles";
 
 const About = () => {
@@ -18,27 +17,6 @@ const About = () => {
   about how we can become better computer scientists, data scientists, lawyers, and people.`;
   const A_SPACE_FOR_STUDENTS_TO_TITLE = "A space for students to...";
 
-  /**
-   * Styles
-   */
-  const heroImageStyles: SxProps = {
-    backgroundImage: purpleMeshStyles,
-    width: "100%",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    px: "5%",
-    pt: "30vh",
-    pb: "20vh",
-  };
-  const heroImageTextStyles: SxProps = {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "left",
-    textAlign: "left",
-  };
   const iconCardContainerStyles: SxProps = {
     display: "grid",
     gridTemplateColumns: {
@@ -48,20 +26,6 @@ const About = () => {
     gap: "2.5rem",
     maxWidth: "800px",
   };
-
-  // Hero image for the page.
-  const heroImage = (
-    <Box sx={heroImageStyles}>
-      <Box sx={heroImageTextStyles}>
-        <Typography variant="h1" component="div" sx={{ lineHeight: 2 }}>
-          {HERO_IMAGE_TITLE}
-        </Typography>
-        <Typography variant="h6" component="div" sx={{ lineHeight: 2.5 }}>
-          {HERO_IMAGE_PARAGRAPH}
-        </Typography>
-      </Box>
-    </Box>
-  );
 
   // Section titled by "A space for students to..."
   const aSpaceForStudentsTo = (
@@ -78,7 +42,7 @@ const About = () => {
   );
 
   const infoSection = (
-    <Box sx={{...defaultFlexColStyles, pb: defaultPaddingY}}>
+    <Box sx={{ ...defaultFlexColStyles, pb: defaultPaddingY }}>
       {aboutPageInfoSection.map((info) => (
         <>
           <Line />
@@ -91,7 +55,11 @@ const About = () => {
   return (
     <>
       <Navbar />
-      {heroImage}
+      <TextualHeroImage
+        title={HERO_IMAGE_TITLE}
+        paragraph={HERO_IMAGE_PARAGRAPH}
+        gradient={true}
+      />
       {aSpaceForStudentsTo}
       {infoSection}
     </>

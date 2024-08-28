@@ -1,9 +1,14 @@
 import CssBaseline from "@mui/material/CssBaseline";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import { Home, About, WhatWeDo, JoinUs } from "./pages";
+  Home,
+  About,
+  Research,
+  JoinUs,
+  Editorials,
+  Projects,
+  ExternalEvents,
+} from "./pages";
 
 const router = createBrowserRouter([
   {
@@ -15,12 +20,24 @@ const router = createBrowserRouter([
     element: <About />,
   },
   {
-    path: "what-we-do",
-    element: <WhatWeDo />,
-  },
-  {
     path: "join-us",
     element: <JoinUs />,
+  },
+  {
+    path: "what-we-do/research",
+    element: <Research />,
+  },
+  {
+    path: "what-we-do/editorials",
+    element: <Editorials />,
+  },
+  {
+    path: "what-we-do/projects",
+    element: <Projects />,
+  },
+  {
+    path: "what-we-do/external-events",
+    element: <ExternalEvents />,
   },
 ]);
 

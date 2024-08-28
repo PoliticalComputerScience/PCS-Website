@@ -1,5 +1,5 @@
 import { StatProps } from "../../utils/interfaces/props";
-import { Box, SxProps, Typography } from "@mui/material";
+import {Card, SxProps, Typography } from "@mui/material";
 import { useTheme } from "@mui/material";
 import { ReactElement } from "react";
 import CountUp from "react-countup";
@@ -54,7 +54,7 @@ const Stat = ({ stat, statName, subtitle }: StatProps) => {
       )}
       <Typography variant="body1">{statName}</Typography>
       {subtitle ? <Typography variant="body2">{subtitle}</Typography> : null}
-    </Box>
+    </Card>
   );
 };
 
