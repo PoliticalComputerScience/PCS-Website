@@ -59,7 +59,10 @@ const socials = [
 const PCS_GMAIL = "pcs.berkeley@gmail.com";
 const PCS_ADDRESS = "University of California, Berkeley";
 
-const bold_no_underline: SxProps = { fontWeight: 600, textDecoration: "none" };
+const bold_no_underline: SxProps = {
+    fontWeight: "bold",
+    textDecoration: "none",
+};
 
 const getSvgIcon = (Icon: string) => {
     return (
@@ -110,7 +113,7 @@ const Footer = () => {
     );
 
     const contactUs = (
-        <Stack spacing={2} alignItems="right" sx={{ pr: PADDING, pl:2 }}>
+        <Stack spacing={2} alignItems="right" sx={{ pr: PADDING, pl: 2 }}>
             <Typography sx={bold_no_underline}>Contact</Typography>
             <Typography
                 component={Link}
