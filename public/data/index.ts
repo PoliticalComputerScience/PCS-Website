@@ -169,22 +169,23 @@ export const recruitmentSteps: RecruitmentStepProps[] = [
   },
 
   {
-    name: "URM Infosession + Infosession 1",
-    start: new Date("2024-09-05"),
-    end: new Date("2024-09-05"),
+    name: "Infosession 1 (Virtual), 8 - 9 PM",
+    start: new Date("2024-09-06"),
+    end: new Date("2024-09-06"),
     description: "Ia Ia Cthulhu Ftaghn?",
+    link: "https://berkeley.zoom.us/j/8079345982?omn=93103234887"
   },
 
   {
-    name: "Infosession 2 (Virtual)",
-    start: new Date("2024-09-09"),
-    end: new Date("2024-09-09"),
+    name: "Infosession 2, 8 - 9 PM, Dwinelle 205",
+    start: new Date("2024-09-10"),
+    end: new Date("2024-09-10"),
     description: "Ia Ia Cthulhu Ftaghn?",
   },
   {
     name: "Applications Due",
-    start: new Date("2024-09-10"),
-    end: new Date("2024-09-10"),
+    start: new Date("2024-09-11"),
+    end: new Date("2024-09-11"),
     description: "At the end of things, where the dry dust bleeds",
   },
 ];

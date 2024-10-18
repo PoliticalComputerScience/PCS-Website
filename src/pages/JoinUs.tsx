@@ -12,7 +12,7 @@ import partnerClubIcon from "/images/join_us_page/partnerClub.png";
 import externalSponsorIcon from "/images/join_us_page/externalSponsor.png";
 import partnerClubIcons from "/images/partnerClubIcons.png";
 import partnerOrgIcons from "/images/partnerOrgIcons.png";
-import recruitmentTimeline from "/images/recruitmentTimeline.png";
+import recruitmentTimeline from "/images/recruitmentTimeline2.png";
 
 const waysToJoin = ["General Member", "Partner Club", "External Sponsor"];
 
@@ -82,11 +82,11 @@ const JoinUs = () => {
         component="img"
         src={recruitmentTimeline}
         sx={{
-          aspectRatio: 1,
           width: {
             md: "60%",
             xs: "100%",
           },
+          aspectRatio: 2/3
         }}
       />
       <Box
