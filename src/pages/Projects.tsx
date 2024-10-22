@@ -1,4 +1,4 @@
-import { Navbar, TextualHeroImage } from "../components/layout";
+import { Footer, Navbar, TextualHeroImage } from "../components/layout";
 import { ProjectCard } from "../components/miscellaneous";
 import { projects } from "../../public/data";
 import { Box, SxProps, Typography } from "@mui/material";
@@ -41,10 +41,10 @@ const Projects = () => {
 
   const projectQualifiesViaFilter = (project: ProjectCardProps): boolean => {
     if (selectedDropdownItem === DROPDOWN_TEXT) {
-      return true
+      return true;
     }
-    return project.tags.includes(selectedDropdownItem)
-  }
+    return project.tags.includes(selectedDropdownItem);
+  };
 
   /**
    * Styles
@@ -72,7 +72,7 @@ const Projects = () => {
     flexDirection: "column",
     gap: {
       md: "4rem",
-      xs: "2rem"
+      xs: "2rem",
     },
     justifyContent: "center",
     alignItems: "center",
@@ -83,7 +83,7 @@ const Projects = () => {
     display: "flex",
     flexDirection: {
       md: "row",
-      xs: "column"
+      xs: "column",
     },
     gap: "1rem",
     justifyContent: "space-between",
@@ -92,8 +92,8 @@ const Projects = () => {
       xs: "start",
     },
     width: "100%",
-    maxWidth: "1200px"
-  }
+    maxWidth: "1200px",
+  };
 
   return (
     <>
@@ -123,6 +123,7 @@ const Projects = () => {
           ))}
         </Box>
       </Box>
+      <Footer />
     </>
   );
 };
