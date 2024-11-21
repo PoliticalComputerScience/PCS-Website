@@ -76,4 +76,5 @@ export interface RecruitmentStepProps {
     start: Date;
     end: Date;
     description?: string;
+    link? : string;
 }

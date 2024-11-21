@@ -12,7 +12,7 @@ import partnerClubIcon from "/images/join_us_page/partnerClub.png";
 import externalSponsorIcon from "/images/join_us_page/externalSponsor.png";
 import partnerClubIcons from "/images/partnerClubIcons.png";
 import partnerOrgIcons from "/images/partnerOrgIcons.png";
-import recruitmentTimeline from "/images/recruitmentTimeline.png";
+import recruitmentTimeline from "/images/recruitmentTimeline2.png";
 
 const waysToJoin = ["General Member", "Partner Club", "External Sponsor"];
 
@@ -82,11 +82,11 @@ const JoinUs = () => {
         component="img"
         src={recruitmentTimeline}
         sx={{
-          aspectRatio: 1,
           width: {
             md: "60%",
             xs: "100%",
           },
+          aspectRatio: 2/3
         }}
       />
       <Box
@@ -281,12 +281,13 @@ const JoinUs = () => {
             <Typography variant="h6">How Do I Join?</Typography>
             <Typography>
               The recruitment process may change slightly between cycles but
-              generally consists of two stages:
+              generally consists of three stages:
               <ol>
                 <li>Brief application</li>
-                <li> Short, in-person interview.</li>
+                <li>Short, in-person interview.</li>
+                <li>Social Round</li>
               </ol>
-              Applicants who advance past both steps are invited to join the
+              Applicants who advance past these steps are invited to join the
               club.
             </Typography>
           </Stack>

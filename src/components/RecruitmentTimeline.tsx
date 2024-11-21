@@ -1,11 +1,5 @@
 import { useTheme } from "@mui/material/styles";
-import {
-  Stepper,
-  Step,
-  StepLabel,
-  Box,
-  Typography,
-} from "@mui/material";
+import { Stepper, Step, StepLabel, Box, Typography } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 import { recruitmentSteps } from "../../public/data";
@@ -14,7 +8,10 @@ import { ArrowForward } from "@mui/icons-material";
 const PcsConnector = () => {
   const theme = useTheme();
   return (
-    <StepLabel sx={{ color: theme.palette.secondary.light, p:2 }} icon={<span />}>
+    <StepLabel
+      sx={{ color: theme.palette.secondary.light, p: 2 }}
+      icon={<span />}
+    >
       <ArrowForward
         preserveAspectRatio={"none"}
         sx={{ color: theme.palette.secondary.light }}
@@ -39,13 +36,13 @@ const RecruitmentTimeline = () => {
   return (
     <Box>
       <Stepper
-    sx ={{p: 2}}
+        sx={{ p: 2 }}
         connector={<PcsConnector />}
         nonLinear
         orientation={bigscreen ? "horizontal" : "vertical"}
       >
-        {recruitmentSteps.map(({ name, start, end }) => (
-          <Step key={name} completed={false} sx={{ maxWidth: "20rem"}}>
+        {recruitmentSteps.map(({ name, start, end, link }) => (
+          <Step key={name} completed={false} sx={{ maxWidth: "20rem" }}>
             <StepLabel
               StepIconProps={{
                 sx: {
@@ -53,11 +50,15 @@ const RecruitmentTimeline = () => {
                 },
               }}
             >
-            <Box sx={{color: theme.palette.primary.main}}>
-              <Typography sx={{ fontWeight: "bold" }}>{name}</Typography>
-              <Typography variant='subtitle2'>{renderDate(start, end)}</Typography>
-            {/*<Typography variant='body2'>{description}</Typography>*/}
-            </Box>
+              <Box sx={{ color: theme.palette.primary.main }}>
+                <Typography sx={{ fontWeight: "bold" }}>
+                  {link ? <a href={link}>{name}</a> : name}
+                </Typography>
+                <Typography variant="subtitle2">
+                  {renderDate(start, end)}
+                </Typography>
+                {/*<Typography variant='body2'>{description}</Typography>*/}
+              </Box>
             </StepLabel>
           </Step>
         ))}
