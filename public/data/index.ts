@@ -19,6 +19,8 @@ import orderedLibertyLandscape from "../images/ordered-liberty-landscape.png";
 import dataScienceCircleLandscape from "../images/data-science-circle-landscape.png";
 import dataScienceCirclePortait from "../images/data-science-circle-portrait.svg";
 import linkHealthVendingMachineLandscape from "../images/link-health-vending-machine-landscape.png";
+import werepresentLandscape from "../images/werepresent-landscape.png";
+import werepresentPortait from "../images/werepresent-portrait.png";
 
 export const stats: StatProps[] = [
   {
@@ -109,6 +111,14 @@ export const aboutPageInfoSection: InfoSectionProps[] = [
 ];
 
 export const projects: ProjectCardProps[] = [
+  {
+    projectName: "WeRepresent x PCS",
+    projectDescription:
+      "Building the backend algorithm of the website and conducting an LLM feasibility study",
+    tags: ["Web Dev", "Data Science", "Research"],
+    landscapePhoto: werepresentLandscape,
+    portraitPhoto: werepresentPortait
+  },
   {
     projectName: "FoodWatch",
     projectDescription:
