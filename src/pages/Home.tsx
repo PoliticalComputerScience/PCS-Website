@@ -1,5 +1,5 @@
 import { Navbar } from "../components/layout";
-import RecruitmentTimeline from "../components/RecruitmentTimeline";
+// import RecruitmentTimeline from "../components/RecruitmentTimeline";
 import {
   Divider,
   // Stack,
@@ -44,7 +44,7 @@ const Home = () => {
   but we also have room individuals who explore non-technical projects relating to tech policy, 
   and even code tools to help inform others about government.`;
 
-  const recruitmentTimelineTitle = "Recruitment Timeline:";
+  // const recruitmentTimelineTitle = "Recruitment Timeline:";
 
   /**
    * Styles
@@ -89,20 +89,20 @@ const Home = () => {
     gap: "2rem",
   };
 
-  const recruitmentTimelineStyles: SxProps = {
-    ...defaultFlexStyles,
-    flexDirection: {
-      md: "column",
-      xs: "column",
-    },
-    // width: "100%",
-    // overflowX: "hidden",
-    // justifyContent: "center",
-    alignItems: "start",
-    px: "3rem",
-    // py: "5rem",
-    gap: "2rem",
-  };
+  // const recruitmentTimelineStyles: SxProps = {
+  //   ...defaultFlexStyles,
+  //   flexDirection: {
+  //     md: "column",
+  //     xs: "column",
+  //   },
+  //   // width: "100%",
+  //   // overflowX: "hidden",
+  //   // justifyContent: "center",
+  //   alignItems: "start",
+  //   px: "3rem",
+  //   // py: "5rem",
+  //   gap: "2rem",
+  // };
 
   const heroImage = (
     <Box sx={heroImageStyles}>
@@ -158,12 +158,12 @@ const Home = () => {
     </Box>
   );
 
-  const recruitmentTimeline = (
+  /*const recruitmentTimeline = (
     <Box sx={{ ...recruitmentTimelineStyles, p: 2 }}>
       <Typography variant="h2">{recruitmentTimelineTitle}</Typography>
       <RecruitmentTimeline />
     </Box>
-  );
+  );*/
 
   // const ourCommunity = (
   //   <Stack
@@ -256,7 +256,7 @@ const Home = () => {
       {heroImage}
       {clubStats}
       {whoWeAre}
-      {recruitmentTimeline}
+      {/*recruitmentTimeline*/}
       {/*ourCommunity*/}
       {bragging}
       <Footer />

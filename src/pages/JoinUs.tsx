@@ -78,7 +78,11 @@ const JoinUs = () => {
         alignItems: "center",
       }}
     >
-      <Box
+      <Typography variant="h3" sx={{lineHeight: 1.5}}>
+        Our recruitment cycle is over, please check back in January to join us
+        in the spring!
+      </Typography>
+      {/* <Box
         component="img"
         src={recruitmentTimeline}
         sx={{
@@ -134,7 +138,7 @@ const JoinUs = () => {
         >
           Recruitment Card
         </Button>
-      </Box>
+      </Box> */}
     </Box>
   );
 
