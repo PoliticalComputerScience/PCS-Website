@@ -49,6 +49,10 @@ const Projects = () => {
   /**
    * Styles
    */
+  const containerStyles: SxProps = {
+    width: "100vw",
+    overflowX: "hidden"
+  }
   const projectCardGap = {
     lg: "6rem",
     md: "4rem",
@@ -64,7 +68,7 @@ const Projects = () => {
     justifyItems: "center",
     alignItems: "start",
     gap: projectCardGap,
-    maxWidth: "1200px",
+    maxWidth: "min(1200px, 100%)",
     pb: projectCardGap,
   };
   const projectFlexAlignmentContainer: SxProps = {
@@ -96,7 +100,7 @@ const Projects = () => {
   };
 
   return (
-    <>
+    <Box sx={containerStyles}>
       <Navbar />
       <TextualHeroImage
         title={HERO_IMAGE_TITLE}
@@ -124,7 +128,7 @@ const Projects = () => {
         </Box>
       </Box>
       <Footer />
-    </>
+    </Box>
   );
 };
 

@@ -138,7 +138,7 @@ const Footer = () => {
           <img
             src="http://www.ocf.berkeley.edu/hosting-logos/ocf-hosted-penguin.svg"
             alt="Hosted by the OCF"
-            style={{ border: 0 }}
+            style={{ border: 0, maxWidth: "200px" }}
           />
         </a>
       </Container>
