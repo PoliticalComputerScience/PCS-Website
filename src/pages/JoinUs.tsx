@@ -1,4 +1,4 @@
-import { Link, Stack, Typography, Card, Box, Button } from "@mui/material";
+import { Link, Stack, Typography, Card, Box } from "@mui/material";
 import { Navbar, Footer } from "../components/layout";
 
 import {
@@ -12,7 +12,7 @@ import partnerClubIcon from "/images/join_us_page/partnerClub.png";
 import externalSponsorIcon from "/images/join_us_page/externalSponsor.png";
 import partnerClubIcons from "/images/partnerClubIcons.png";
 import partnerOrgIcons from "/images/partnerOrgIcons.png";
-import recruitmentTimeline from "/images/recruitmentTimeline2.png";
+// import recruitmentTimeline from "/images/recruitmentTimeline2.png";
 
 const waysToJoin = ["General Member", "Partner Club", "External Sponsor"];
 
