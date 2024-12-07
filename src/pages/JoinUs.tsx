@@ -1,4 +1,4 @@
-import { Link, Stack, Typography, Card, Box, Button } from "@mui/material";
+import { Link, Stack, Typography, Card, Box } from "@mui/material";
 import { Navbar, Footer } from "../components/layout";
 
 import {
@@ -12,7 +12,7 @@ import partnerClubIcon from "/images/join_us_page/partnerClub.png";
 import externalSponsorIcon from "/images/join_us_page/externalSponsor.png";
 import partnerClubIcons from "/images/partnerClubIcons.png";
 import partnerOrgIcons from "/images/partnerOrgIcons.png";
-import recruitmentTimeline from "/images/recruitmentTimeline2.png";
+// import recruitmentTimeline from "/images/recruitmentTimeline2.png";
 
 const waysToJoin = ["General Member", "Partner Club", "External Sponsor"];
 
@@ -78,7 +78,11 @@ const JoinUs = () => {
         alignItems: "center",
       }}
     >
-      <Box
+      <Typography variant="h3" sx={{lineHeight: 1.5}}>
+        Our recruitment cycle is over, please check back in January to join us
+        in the spring!
+      </Typography>
+      {/* <Box
         component="img"
         src={recruitmentTimeline}
         sx={{
@@ -134,7 +138,7 @@ const JoinUs = () => {
         >
           Recruitment Card
         </Button>
-      </Box>
+      </Box> */}
     </Box>
   );
 
