@@ -1,16 +1,6 @@
 import { Navbar } from "../components/layout";
 import RecruitmentTimeline from "../components/RecruitmentTimeline";
-import {
-  Divider,
-  // Stack,
-  Box,
-  Button,
-  SxProps,
-  Typography,
-  // Card,
-  // Paper,
-  // CardMedia,
-} from "@mui/material";
+import { Divider, Box, Button, SxProps, Typography } from "@mui/material";
 import groupPhoto from "/images/group_photo.jpg";
 import dssCirclePhoto from "/images/dss_circle_photo.jpg";
 import { useTheme } from "@mui/material/styles";
@@ -38,11 +28,7 @@ const Home = () => {
   const overlaySubtitle = "A community built for diverse thought.";
   const joinUsButtonText = "JOIN US!";
   const whoWeAreTitle = "Who We Are:";
-  const whoWeAreParagraph = `Political Computer Science @ Berkeley is a club dedicated to exploring interdisciplinary 
-  work connecting the technology and political fields. We have plenty of individuals with a 
-  strong tech background and host several web development/data science project each semester, 
-  but we also have room individuals who explore non-technical projects relating to tech policy, 
-  and even code tools to help inform others about government.`;
+  const whoWeAreParagraph = `Political Computer Science @ Berkeley is a community of students who are passionate about using technology to solve social and political issues. We are a diverse group of students from various backgrounds and majors who come together to discuss and create solutions to real-world problems with the use of modern technologies.`;
 
   const recruitmentTimelineTitle = "Recruitment Timeline:";
 
@@ -95,12 +81,8 @@ const Home = () => {
       md: "column",
       xs: "column",
     },
-    // width: "100%",
-    // overflowX: "hidden",
-    // justifyContent: "center",
     alignItems: "start",
     px: "3rem",
-    // py: "5rem",
     gap: "2rem",
   };
 
@@ -165,35 +147,6 @@ const Home = () => {
     </Box>
   );
 
-  // const ourCommunity = (
-  //   <Stack
-  //     component={Paper}
-  //     sx={{ overflow: "auto", backgroundImage: purpleMeshStyles, my: 2, p: 2 }}
-  //     direction="row"
-  //     spacing={5}
-  //   >
-  //     <Card raised={true} sx={{ borderRadius: "10px", width: "13%", p: 2 }}>
-  //       <Stack direction="column" spacing={2}>
-  //         <Typography variant="h2">
-  //           Our{" "}
-  //           {
-  //             <Typography variant="h2" sx={purpleInlineText}>
-  //               Community
-  //             </Typography>
-  //           }
-  //           :
-  //         </Typography>
-  //         <Typography>retreat, socials, speaker events and more!</Typography>
-  //         <CardMedia sx={{ height: 160 }} image={friendshipPhoto}></CardMedia>
-  //       </Stack>
-  //     </Card>
-  //   </Stack>
-  // );
-
-  // const clubImage = (src: string) => (
-  //   <Box component={"img"} sx={{ height: "7em" }} src={src} />
-  // );
-
   const bigscreen = useMediaQuery(theme.breakpoints.up("sm"));
 
   const bragging = (
@@ -218,7 +171,7 @@ const Home = () => {
       <Box sx={{ ...defaultFlexColStyles, flex: 1 }}>
         <Typography variant={"h1"}>
           {" "}
-          our past{" "}
+          Our past{" "}
           {
             <Typography
               variant={"h1"}
@@ -244,7 +197,7 @@ const Home = () => {
         sx={{ bgcolor: theme.palette.primary.main, borderRightWidth: 5 }}
       />
       <Box sx={{ ...defaultFlexColStyles, flex: 1 }}>
-        <Typography variant="h1">where do our members go? </Typography>
+        <Typography variant="h1">Where do our members go? </Typography>
         <Box component="img" src={whereMembersGo} sx={{ width: "90%" }} />
       </Box>
     </Box>
@@ -257,7 +210,6 @@ const Home = () => {
       {clubStats}
       {whoWeAre}
       {recruitmentTimeline}
-      {/*ourCommunity*/}
       {bragging}
       <Footer />
     </Box>

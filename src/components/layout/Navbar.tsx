@@ -56,7 +56,7 @@ const Navbar = () => {
     height: "100%",
     padding: "0.5rem",
     position: "relative",
-    zIndex: "200"
+    zIndex: "200",
   };
 
   // Styles for the button itself
@@ -75,22 +75,27 @@ const Navbar = () => {
   const pages: LinkProps[] = [
     {
       name: "home",
-      buttonVariant: "text",
+      buttonVariant: "home",
       link: "/",
     },
     {
       name: "about",
-      buttonVariant: "text",
+      buttonVariant: "about",
       link: "/about",
     },
     {
+      name: "members",
+      buttonVariant: "members",
+      link: "/members",
+    },
+    {
       name: "projects",
-      buttonVariant: "text",
-      link: "/what-we-do/projects"
+      buttonVariant: "projects",
+      link: "/what-we-do/projects",
     },
     {
       name: "join us",
-      buttonVariant: "contained",
+      buttonVariant: "join-us",
       link: "/join-us",
       color: "secondary",
     },

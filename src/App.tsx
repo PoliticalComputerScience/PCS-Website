@@ -8,6 +8,7 @@ import {
   Editorials,
   Projects,
   ExternalEvents,
+  Members,
 } from "./pages";
 
 const router = createBrowserRouter([
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
     path: "join-us",
     element: <JoinUs />,
   },
+  {
+    path: "members",
+    element: <Members />,
+  },
+
   {
     path: "what-we-do/research",
     element: <Research />,
