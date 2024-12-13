@@ -1,0 +1,164 @@
+[
+	{
+		"name": "Miller Jaquet",
+		"roles": ["Senior Member"],
+		"linkedin": "https://www.linkedin.com/in/miller-jaquet/",
+		"img": "./Members/miller-prof.png",
+		"imgSilly": "/group-pic.jpeg",
+		"major": "Interdisciplinary Studies",
+		"graduation": "2025"
+	},
+	{
+		"name": "Rohit Jha",
+		"roles": ["Senior Member"],
+		"linkedin": "https://www.linkedin.com/in/rohitjha2003/",
+		"img": "./Members/rohit-prof.jpg",
+		"imgSilly": "/group-pic.jpeg",
+		"major": "Computer Science, Data Science, Statistics",
+		"graduation": "2025"
+	},
+	{
+		"name": "Iman Qureshi",
+		"roles": ["Senior Member"],
+		"linkedin": "",
+		"img": "./Members/Iman-prof.jpeg",
+		"imgSilly": "/group-pic.jpeg",
+		"major": "",
+		"graduation": "2025"
+	},
+	{
+		"name": "Noah Abji",
+		"roles": ["Senior Member"],
+		"linkedin": "",
+		"linkedin": "https://www.linkedin.com/in/noah-abji-418b7321b",
+		"img": "./Members/noah-prof.png",
+		"imgSilly": "/noah-prof.png",
+		"major": "Computer Science",
+		"graduation": "2026"
+	},
+	{
+		"name": "Carisma De Anda",
+		"roles": ["Senior Member"],
+		"linkedin": "https://www.linkedin.com/in/carisma-de-anda",
+		"img": "./Members/carisma-prof.png",
+		"imgSilly": "/group-pic.jpeg",
+		"major": "Political Science & Data Science",
+		"graduation": "2026"
+	},
+	{
+		"name": "Anya Danes",
+		"roles": ["Senior Member"],
+		"linkedin": "",
+		"img": "./Members/anya-prof.jpg",
+		"imgSilly": "/group-pic.jpeg",
+		"major": "",
+		"graduation": "2027"
+	},
+	{
+		"name": "Gisele DeWitt",
+		"roles": ["Social Chair", "Member"],
+		"linkedin": "https://www.linkedin.com/in/gisele-dewitt-55b75a210/",
+		"img": "./Members/gisele-prof.jpg",
+		"imgSilly": "/group-pic.jpeg",
+		"major": "Political Economy & Statistics",
+		"graduation": "2025"
+	},
+	{
+		"name": "Stephen Okita",
+		"roles": ["Workshops Chair", "Member"],
+		"linkedin": "https://www.linkedin.com/in/stephen-okita-a9427b1b2/",
+		"img": "./Members/stephen-prof.jpg",
+		"major": "Philosophy & CS",
+		"graduation": "2027"
+	},
+	{
+		"name": "Divit Chopra",
+		"roles": ["Initiatives Chair", "Project Manager", "Member"],
+		"linkedin": "",
+		"img": "./Members/divit-prof.jpg",
+		"imgSilly": "/group-pic.jpeg",
+		"major": "MET",
+		"graduation": "2027"
+	},
+	{
+		"name": "Billy Pierce",
+		"roles": ["Project Manager", "Senior Member"],
+		"linkedin": "https://www.linkedin.com/in/billwpierce/",
+		"img": "./Members/billy-prof.png",
+		"imgSilly": "/group-pic.jpeg",
+		"major": "MET",
+		"graduation": "2024"
+	},
+	{
+		"name": "Kailen Grottel-Brown",
+		"roles": ["Member"],
+		"linkedin": "www.linkedin.com/in/kailen-gbrown",
+		"img": "./Members/kailen-prof.jpeg",
+		"imgSilly": "./Members/Kailen-silly.jpg",
+		"major": "Political Science, Public Policy (Minor)",
+		"graduation": "2025"
+	},
+	{
+		"name": "Emile Shah",
+		"roles": ["Member"],
+		"linkedin": "https://www.linkedin.com/in/emile-shah/",
+		"img": "./Members/emile-prof.jpg",
+		"imgSilly": "./Members/emile-prof.jpg",
+		"major": "Data Science & Political Science",
+		"graduation": "2027"
+	},
+	{
+		"name": "Andrew Chen",
+		"roles": ["Senior Member"],
+		"linkedin": "https://www.linkedin.com/in/andrewchen04",
+		"img": "./Members/andrew-prof.jpeg",
+		"imgSilly": "./Members/andrew-prof.jpeg",
+		"major": "Political Science & Psychology",
+		"graduation": "2024"
+	},
+	{
+		"name": "Carolyn Wang",
+		"roles": ["Member"],
+		"linkedin": "https://www.linkedin.com/in/carolyn-wang-jy/",
+		"img": "./Members/carolyn-prof.jpg",
+		"imgSilly": "./Members/carolyn-prof.jpg",
+		"major": "Computer Science & Public Policy",
+		"graduation": "2027"
+	},
+	{
+		"name": "Mark Verzhbinsky",
+		"roles": ["Member"],
+		"linkedin": "https://www.linkedin.com/in/mark-verzhbinsky-920059232",
+		"img": "./Members/mark-prof.jpeg",
+		"imgSilly": "./Members/mark-prof.jpeg",
+		"major": "Political Science",
+		"graduation": "2025"
+	},
+	{
+		"name": "Caelyn Carlson",
+		"roles": ["Project Manager", "Senior Member"],
+		"linkedin": "https://www.linkedin.com/in/caelyn-carlson",
+		"img": "./Members/caelyn-prof.jpg",
+		"imgSilly": "./Members/caelyn-prof.jpg",
+		"major": "Rhetoric & Political Science",
+		"graduation": "2024"
+	},
+    	{
+	        "name": "Abdullah Memon",
+	        "roles": ["Member"],
+	        "linkedin": "https://www.linkedin.com/in/abdullah-memon-589996235/",
+	        "img": "./Members/abdullah-m-prof.jpg",
+	        "imgSilly": "./Members/abdullah-m-prof.jpg",
+	        "major": "Political Economy, Data Science (Minor)",
+	        "graduation": "2027"
+    	},
+	{
+		"name": "Nicholas Chae",
+	        "roles": ["Member"],
+	        "linkedin": "www.linkedin.com/in/nicholas-chae",
+	        "img": "./Members/nico-chae.jpg",
+	        "imgSilly": "./Members/nico-chae.jpg",
+	        "major": "Data Science",
+	        "graduation": "2025"
+	}
+]

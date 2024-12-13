@@ -1,11 +1,11 @@
-import { Navbar } from "../components/layout"
+import { Navbar } from "../components/layout";
 
 const Research = () => {
-  return (
-    <div>
-        <Navbar />
-    </div>
-  )
-}
+    return (
+        <div>
+            <Navbar />
+        </div>
+    );
+};
 
-export default Research
+export default Research;
