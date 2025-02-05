@@ -8,7 +8,7 @@ import {
     Editorials,
     Projects,
     ExternalEvents,
-    Members,
+    // Members,
 } from "./pages";
 
 const router = createBrowserRouter([
