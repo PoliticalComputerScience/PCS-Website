@@ -76,11 +76,11 @@ const Navbar = () => {
             buttonVariant: "about",
             link: "/about",
         },
-        {
-            name: "members",
-            buttonVariant: "members",
-            link: "/members",
-        },
+        // {
+        //     name: "members",
+        //     buttonVariant: "members",
+        //     link: "/members",
+        // },
         {
             name: "projects",
             buttonVariant: "projects",

@@ -167,35 +167,36 @@ export const recruitmentSteps: RecruitmentStepProps[] = [
 
   {
     name: "Tabling",
-    start: new Date("2024-08-28"),
-    end: new Date("2024-09-11"),
+    start: new Date("2025-01-21"),
+    end: new Date("2024-02-02"),
     description: "We'll be tabling on Sproul! Come say hi.",
   },
   {
     name: "Coffee Chats",
-    start: new Date("2024-09-02"),
-    end: new Date("2024-09-10"),
+    start: new Date("2025-01-21"),
+    end: new Date("2025-02-04"),
     description: "Chat with a board member and learn more about the club!",
   },
 
   {
     name: "Infosession 1 (Virtual), 8 - 9 PM",
-    start: new Date("2024-09-06"),
-    end: new Date("2024-09-06"),
+    start: new Date("2025-01-27"),
+    end: new Date("2025-01-27"),
     description: "Ia Ia Cthulhu Ftaghn?",
     link: "https://berkeley.zoom.us/j/8079345982?omn=93103234887"
   },
 
   {
-    name: "Infosession 2, 8 - 9 PM, Dwinelle 205",
-    start: new Date("2024-09-10"),
-    end: new Date("2024-09-10"),
+    name: "Ethical Tec Infosession 2, 8 - 9 PM, Dwinelle 205",
+    start: new Date("2024-01-30"),
+    end: new Date("2025-01-30"),
     description: "Ia Ia Cthulhu Ftaghn?",
   },
   {
     name: "Applications Due",
-    start: new Date("2024-09-11"),
-    end: new Date("2024-09-11"),
+    start: new Date("2025-02-04"),
+    end: new Date("2025-02-04"),
     description: "At the end of things, where the dry dust bleeds",
+    link: "https://docs.google.com/forms/d/1Q3BHxsN1qs0IkklM_2ZXa5rC731xPE1oFq7MOmTQWFo/edit#question=1588624652&field=621321900"
   },
 ];

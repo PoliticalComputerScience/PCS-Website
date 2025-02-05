@@ -24,10 +24,10 @@ const router = createBrowserRouter([
         path: "join-us",
         element: <JoinUs />,
     },
-    {
-        path: "members",
-        element: <Members />,
-    },
+    // {
+    //     path: "members",
+    //     element: <Members />,
+    // },
 
     {
         path: "what-we-do/research",

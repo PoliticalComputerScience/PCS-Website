@@ -8,7 +8,7 @@ import partnerClubIcon from "/images/join_us_page/partnerClub.png";
 import externalSponsorIcon from "/images/join_us_page/externalSponsor.png";
 import partnerClubIcons from "/images/partnerClubIcons.png";
 import partnerOrgIcons from "/images/partnerOrgIcons.png";
-import recruitmentTimeline from "/images/recruitmentTimeline2.png";
+import recruitmentTimeline from "/images/2025flyer.png";
 
 const waysToJoin = ["General Member", "Partner Club", "External Sponsor"];
 
@@ -75,17 +75,6 @@ const JoinUs = () => {
             }}
         >
             <Box
-                component="img"
-                src={recruitmentTimeline}
-                sx={{
-                    width: {
-                        md: "60%",
-                        xs: "100%",
-                    },
-                    aspectRatio: 2 / 3,
-                }}
-            />
-            <Box
                 sx={{
                     display: "flex",
                     flexDirection: "row",
@@ -99,7 +88,7 @@ const JoinUs = () => {
                 }}
             >
                 <Button
-                    href="https://docs.google.com/forms/d/e/1FAIpQLScuHtC2gVWd3YcQw0WI2myL31_uYHj8dWU-WkExroT4wdaoIQ/viewform"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLScDgbV_URB9l5nT1bhFb0pK2t_eQzFHctjdHRC5RpgRgP66FQ/viewform?usp=sharing"
                     target="_blank"
                     sx={{
                         flex: 1,
@@ -115,7 +104,7 @@ const JoinUs = () => {
                     Application
                 </Button>
                 <Button
-                    href="https://pcs-fall2024.carrd.co/"
+                    href="https://pcs-spring2025.carrd.co/"
                     target="_blank"
                     sx={{
                         flex: 1,
@@ -131,6 +120,17 @@ const JoinUs = () => {
                     Recruitment Card
                 </Button>
             </Box>
+            <Box
+                component="img"
+                src={recruitmentTimeline}
+                sx={{
+                    width: {
+                        md: "60%",
+                        xs: "100%",
+                    },
+                    aspectRatio: 2 / 3,
+                }}
+            />
         </Box>
     );
 
