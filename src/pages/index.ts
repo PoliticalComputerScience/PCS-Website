@@ -5,6 +5,6 @@ import JoinUs from "./JoinUs";
 import ExternalEvents from "./ExternalEvents";
 import Projects from "./Projects";
 import Research from "./Research";
-import Members from "./Members";
+// import Members from "./Members";
 
-export { Home, About, Editorials, JoinUs, ExternalEvents, Projects, Research, Members };
+export { Home, About, Editorials, JoinUs, ExternalEvents, Projects, Research };
