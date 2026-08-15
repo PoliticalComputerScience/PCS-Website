@@ -37,10 +37,6 @@ export const stats: StatProps[] = [
     statName: "Members",
     subtitle: "And Alumni",
   },
-  {
-    stat: "1",
-    statName: "DeCal",
-  },
 ];
 
 export const aboutPageIconCards: IconCardProps[] = [
@@ -90,7 +86,7 @@ export const aboutPageInfoSection: InfoSectionProps[] = [
         excursions, parties, and of course we have a retreat each semester. The
         best place to get to know your PCS pals!`,
     img: "/images/retreat.jpeg",
-    additionalInfo: "Two to three per month",
+
   },
   {
     title: "Projects",
@@ -102,11 +98,10 @@ export const aboutPageInfoSection: InfoSectionProps[] = [
   },
   {
     title: "Workshops",
-    children: `We host a few workshops each month focusing on improving our members'
+    children: `We host a few workshops each semester focusing on improving our members'
         skill sets, including resumé and career workshops, data science, web
         development, and much more!`,
     img: "/images/workshop.jpg",
-    additionalInfo: "One to two per month",
   },
 ];
 
@@ -164,39 +159,62 @@ export const projects: ProjectCardProps[] = [
 
 //TODO: timezone fuckery
 export const recruitmentSteps: RecruitmentStepProps[] = [
+      {
+        name: "Tabling",
+        start: new Date("2026-08-26"),
+        end: new Date("2026-09-04"),
+        description: "We'll be tabling on Sproul! Come say hi."
+      },
+      {
+        name: "Coffee Chats",
+        start: new Date("2026-09-01"),
+        end: new Date("2026-09-04"),
+        description: "Talk to a board member and learn more about the club!"
+      },
+      {
+        name: "Infosession",
+        start: new Date("2026-09-02"),
+        end: new Date("2026-09-02"),
+        description: "Learn more about the club - date/time not yet finalised"
+      },
+      {
+        name: "Applications Due!",
+        start: new Date("2026-08-26"),
+        end: new Date("2026-09-04"),
+        description: "Applications close 11:59 PM 09/04!"
+      }
+  // {
+  //   name: "Tabling",
+  //   start: new Date("2025-01-21"),
+  //   end: new Date("2024-02-02"),
+  //   description: "We'll be tabling on Sproul! Come say hi.",
+  // },
+  // {
+  //   name: "Coffee Chats",
+  //   start: new Date("2025-01-21"),
+  //   end: new Date("2025-02-04"),
+  //   description: "Chat with a board member and learn more about the club!",
+  // },
 
-  {
-    name: "Tabling",
-    start: new Date("2025-01-21"),
-    end: new Date("2024-02-02"),
-    description: "We'll be tabling on Sproul! Come say hi.",
-  },
-  {
-    name: "Coffee Chats",
-    start: new Date("2025-01-21"),
-    end: new Date("2025-02-04"),
-    description: "Chat with a board member and learn more about the club!",
-  },
+  // {
+  //   name: "Infosession 1 (Virtual), 8 - 9 PM",
+  //   start: new Date("2025-01-27"),
+  //   end: new Date("2025-01-27"),
+  //   description: "Ia Ia Cthulhu Ftaghn?",
+  //   link: "https://berkeley.zoom.us/j/8079345982?omn=93103234887"
+  // },
 
-  {
-    name: "Infosession 1 (Virtual), 8 - 9 PM",
-    start: new Date("2025-01-27"),
-    end: new Date("2025-01-27"),
-    description: "Ia Ia Cthulhu Ftaghn?",
-    link: "https://berkeley.zoom.us/j/8079345982?omn=93103234887"
-  },
-
-  {
-    name: "Ethical Tec Infosession 2, 8 - 9 PM, Dwinelle 205",
-    start: new Date("2024-01-30"),
-    end: new Date("2025-01-30"),
-    description: "Ia Ia Cthulhu Ftaghn?",
-  },
-  {
-    name: "Applications Due",
-    start: new Date("2025-02-04"),
-    end: new Date("2025-02-04"),
-    description: "At the end of things, where the dry dust bleeds",
-    link: "https://docs.google.com/forms/d/1Q3BHxsN1qs0IkklM_2ZXa5rC731xPE1oFq7MOmTQWFo/edit#question=1588624652&field=621321900"
-  },
+  // {
+  //   name: "Ethical Tec Infosession 2, 8 - 9 PM, Dwinelle 205",
+  //   start: new Date("2024-01-30"),
+  //   end: new Date("2025-01-30"),
+  //   description: "Ia Ia Cthulhu Ftaghn?",
+  // },
+  // {
+  //   name: "Applications Due",
+  //   start: new Date("2025-02-04"),
+  //   end: new Date("2025-02-04"),
+  //   description: "At the end of things, where the dry dust bleeds",
+  //   link: "https://docs.google.com/forms/d/1Q3BHxsN1qs0IkklM_2ZXa5rC731xPE1oFq7MOmTQWFo/edit#question=1588624652&field=621321900"
+  // },
 ];
