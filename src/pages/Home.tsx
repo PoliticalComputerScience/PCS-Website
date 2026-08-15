@@ -87,8 +87,8 @@ const Home = () => {
     };
 
     const heroImage = (
-        <Box sx={heroImageStyles}>
-            <Box sx={{ ...defaultOverlayStyles, borderRadius: 5 }}>
+        <Box sx={{...heroImageStyles, paddingTop:"20%"}}>
+            <Box sx={{ ...defaultOverlayStyles, borderRadius: 5}}>
                 <Typography variant="h1" component="div">
                     {overlayTitle}
                 </Typography>
@@ -130,13 +130,7 @@ const Home = () => {
                     {whoWeAreParagraph}
                 </Typography>
             </Box>
-            <Box sx={{ flex: 1 }}>
-                <Box
-                    component="img"
-                    src={dssCirclePhoto}
-                    sx={{ maxWidth: "80%", borderRadius: 5 }}
-                />
-            </Box>
+
         </Box>
     );
 

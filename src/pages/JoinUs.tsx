@@ -57,83 +57,7 @@ const JoinUs = () => {
         />
     );
 
-    const cardAndApplication = (
-        <Box
-            sx={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "1rem",
-                px: {
-                    md: "20%",
-                    xs: "7%",
-                },
-                width: "100%",
-                pt: "20vh",
-                pb: "8vh",
-                justifyContent: "center",
-                alignItems: "center",
-            }}
-        >
-            <Box
-                sx={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "center",
-                    alignItems: "stretch",
-                    width: {
-                        md: "60%",
-                        xs: "100%",
-                    },
-                    gap: "0.5rem",
-                }}
-            >
-                <Button
-                    href="https://docs.google.com/forms/d/e/1FAIpQLScDgbV_URB9l5nT1bhFb0pK2t_eQzFHctjdHRC5RpgRgP66FQ/viewform?usp=sharing"
-                    target="_blank"
-                    sx={{
-                        flex: 1,
-                        width: "100%",
-                        backgroundColor: theme.palette.secondary.main,
-                        color: "white",
-                        "&:hover": {
-                            color: "black",
-                        },
-                        py: "0.5rem",
-                    }}
-                >
-                    Application
-                </Button>
-                <Button
-                    href="https://pcs-spring2025.carrd.co/"
-                    target="_blank"
-                    sx={{
-                        flex: 1,
-                        width: "100%",
-                        backgroundColor: theme.palette.secondary.main,
-                        color: "white",
-                        "&:hover": {
-                            color: "black",
-                        },
-                        py: "0.5rem",
-                    }}
-                >
-                    Recruitment Card
-                </Button>
-            </Box>
-            <Box
-                component="img"
-                src={recruitmentTimeline}
-                sx={{
-                    width: {
-                        md: "60%",
-                        xs: "100%",
-                    },
-                    aspectRatio: 2 / 3,
-                }}
-            />
-        </Box>
-    );
-
+ 
     const purpleCard = (text: string) => (
         <Card id={text} sx={purpleCardStyle}>
             <Typography variant="h6" sx={bold}>
@@ -157,6 +81,7 @@ const JoinUs = () => {
                 justifyContent: "center",
                 alignItems: "center",
                 gap: "2rem",
+                paddingTop:"10%"
             }}
         >
             <Box
@@ -262,7 +187,7 @@ const JoinUs = () => {
                         <Typography>
                             Note: While we are a majority undergrad club, our community and
                             conversations are enriched by our non-traditional, transfer, and
-                            graduate level members.
+                            graduate level members and we welcome them to apply.
                         </Typography>
                     </Stack>
                 </Box>
@@ -272,11 +197,10 @@ const JoinUs = () => {
                         <Typography variant="h6">How Do I Join?</Typography>
                         <Typography>
                             The recruitment process may change slightly between cycles but generally
-                            consists of three stages:
+                            consists of two stages:
                             <ol>
-                                <li>Brief application</li>
+                                <li>Brief written application.</li>
                                 <li>Short, in-person interview.</li>
-                                <li>Social Round</li>
                             </ol>
                             Applicants who advance past these steps are invited to join the club.
                         </Typography>
@@ -410,7 +334,6 @@ const JoinUs = () => {
             }}
         >
             <Navbar />
-            {cardAndApplication}
             {overview}
             {generalMember}
             {partnerClub}
